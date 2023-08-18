@@ -6,6 +6,8 @@ function navBar(){
                 <div className ="d-flex justify-content-between">
                     <div className="d-flex">Logo</div>
 
+
+
                     <div className="d-flex">
                         <div className="p-4">Products</div>
                         <div className="p-4">About</div>
