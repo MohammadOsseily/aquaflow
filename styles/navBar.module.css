@@ -1,0 +1,20 @@
+.test{
+    background-color: black;
+}
+
+.menulinks{
+    text-decoration: none;
+    color: black;
+}
+.border{
+
+    border-bottom-color: #61677A;
+    border-bottom-style: solid;
+    border-width: thin;
+}
+.div_button{
+    height: fit-content;
+    padding: 5px;
+    background-color: white;
+}
+

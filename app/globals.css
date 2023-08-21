@@ -1,13 +1,11 @@
-.body{
-    background-color: #FAF0E6;
+*{
+    background-color: #F9F5F6;
 }
 .Mobile{
     display: none;
 }
 .Desktop{
     display: block;
-    border-bottom-color: red;
-    border-bottom-style: solid;
 }
 
 /*Screen for mobile*/
