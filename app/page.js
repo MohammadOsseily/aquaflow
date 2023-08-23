@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import  NavBar from "./components/navBar"
 import { Roboto } from 'next/font/google'
+import NavBarMobile from "./components/navBarMobile"
 
 const roboto = Roboto({
     weight: '400',
@@ -12,7 +13,7 @@ export default function Home() {
     <main className={roboto.className}>
       <div >
           <div class ="Mobile">
-              <NavBar/>
+              <NavBarMobile/>
           </div>
           <div class= "Desktop">
               <NavBar/>
