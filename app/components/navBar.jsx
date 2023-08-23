@@ -10,14 +10,11 @@ function navBar(){
     return(
         <>
 
-            <div className= {` ${styles.border} d-flex justify-content-between w-75 mx-auto`}>
+            <div className= {` d-flex align-items-center justify-content-between w-75 mx-auto my-3`}>
 
 
                     <div className="pt-2 d-flex">
                         <Image width={80} height={60} src={"/images/logo.png"} alt={"logo"}></Image>
-                    </div>
-
-                    <div className="d-flex">
                         <div className={` ${styles.menulinks} p-4`}><Link className={` ${styles.menulinks}`} href="#">Products</Link></div>
                         <div className={` ${styles.menulinks} p-4`}><Link className={` ${styles.menulinks}`} href="#">About</Link></div>
                         <div className={` ${styles.menulinks} p-4`}><Link className={` ${styles.menulinks}`} href="#">Contact us</Link></div>
@@ -30,9 +27,8 @@ function navBar(){
                     </div>
 
 
-
             </div>
-
+            <hr className=" mx-auto w-75"/>
         </>
 
 )
