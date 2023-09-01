@@ -2,7 +2,7 @@ import Image from 'next/image'
 import  NavBar from "./components/navBar"
 import { Roboto } from 'next/font/google'
 import NavBarMobile from "./components/navBarMobile"
-import Card from "./components/Crad";
+import Card from "./components/Card";
 import theme from "/styles/Card.module.css"
 
 const roboto = Roboto({
@@ -16,6 +16,7 @@ export default function Home() {
       <div className="row  " >
           <div className="col">
               <Card
+                  use={true}
                   src={"/images/black-bottle.png"}
                   alt={"black-bottle"}
                   height ={700}
@@ -30,6 +31,7 @@ export default function Home() {
           </div>
           <div className="col ">
               <Card
+                  arrowIcon={true}
                   src={"/images/greyball.png"}
                   alt={"grey-ball"}
                   height ={255}
@@ -41,6 +43,7 @@ export default function Home() {
 
               />
               <Card
+                  sentIcon={true}
                   theme={theme.third_card}
                   text={"Contact Us"}
                   secondtext={"Have Some Questions?"}

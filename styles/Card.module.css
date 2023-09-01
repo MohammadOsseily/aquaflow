@@ -66,16 +66,31 @@
     background-color: transparent;
     color: black;
     bottom: 1px;
-    left: 60px;
+    left: 30px;
     padding-bottom: 30px;
     width: 100%;
 
 
 }
 .sm_text3{
-    font-size: 20px;
+    font-size: 15px;
     background-color: transparent;
     color: black;
-    padding: 60px;
-    width: 60%;
+    line-height: 1.1;
+    width: 40%;
+    position: absolute;
+    top:30px;
+    left: 30px;
+
+}
+.arrowLink{
+    background-color: transparent;
+    color: black;
+}
+.sendLink{
+    position: absolute;
+    right: 30px;
+    top: 40px;
+    background-color: transparent;
+    color: black;
 }
