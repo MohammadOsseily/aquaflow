@@ -1,12 +1,13 @@
 .btn{
+    border-radius: 12px;
     background-color: #E1E3E7;
     margin-top: 200px;
     margin-left: 40px;
-    width: 250px;
-    height: 100px;
+    width: 220px;
+    height: 80px;
 }
 .border{
-
+    height: 100%;
     border-left-width: 1px;
     border-left-style: solid ;
     border-left-color: #CED0D4 ;
@@ -14,4 +15,21 @@
 }
 .icon-flipped {
     transform: scaleX(-1);
+}
+.smText{
+    margin-bottom: 10px;
+    padding-right: 110px;
+    font-size: 13px;
+    color: #ABABAC;
+    background-color: transparent;
+}
+.mainText{
+    padding-right: 55px;
+
+}
+.mainText a{
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+    cursor: pointer;
 }
