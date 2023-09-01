@@ -10,7 +10,7 @@ function navBar(){
     return(
         <>
 
-            <div className= {` d-flex align-items-center justify-content-between w-75 mx-auto my-3`}>
+            <div className= {` d-flex align-items-center justify-content-between  mx-auto my-3`} style={{width: "65%"}}>
 
 
                     <div className="pt-2 d-flex">
@@ -21,14 +21,14 @@ function navBar(){
                         <div className={` ${styles.menulinks} p-4`}><Link className={` ${styles.menulinks}`} href="#">FAQ</Link></div>
                     </div>
 
-                    <div className={`d-flex align-items-center rounded-pill ${styles.div_button} ${themes.neumorphism}`} >
+                    <div className={`d-flex align-items-center rounded-pill ${styles.div_button} neumorphism`} >
                         <Button title="Login" theme={themes.btn_white}/>
                         <Button title="Sign Up" theme={themes.btn_black}/>
                     </div>
 
 
             </div>
-            <hr className=" mx-auto w-75"/>
+            <hr className=" mx-auto " style={{width: "65%"}}/>
         </>
 
 )

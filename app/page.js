@@ -2,6 +2,8 @@ import Image from 'next/image'
 import  NavBar from "./components/navBar"
 import { Roboto } from 'next/font/google'
 import NavBarMobile from "./components/navBarMobile"
+import Card from "./components/Crad";
+import theme from "/styles/Card.module.css"
 
 const roboto = Roboto({
     weight: '400',
@@ -10,15 +12,46 @@ const roboto = Roboto({
 
 export default function Home() {
   return (
-    <main className={roboto.className}>
-      <div >
-          <div class ="Mobile">
-              <NavBarMobile/>
+        <main className={` ${roboto.className}  mx-auto`} style={{backgroundColor: "lightblue", width: "65%"} }>
+      <div className="row  " >
+          <div className="col">
+              <Card
+                  src={"/images/black-bottle.png"}
+                  alt={"black-bottle"}
+                  height ={700}
+                  width = {1000}
+                  text={"The Simple Bottle Water"}
+                  theme={theme.first_card}
+                  textstyle={theme.text_style1}
+                  secondtext={"MORE OFFERS"}
+                  smtext={theme.sm_text1}
+                  image={theme.first_image}
+              />
           </div>
-          <div class= "Desktop">
-              <NavBar/>
+          <div className="col ">
+              <Card
+                  src={"/images/greyball.png"}
+                  alt={"grey-ball"}
+                  height ={255}
+                  width = {255}
+                  text={"See our blog"}
+                  theme={theme.second_card}
+                  image={theme.second_image}
+                  textstyle={theme.text_style2}
 
+              />
+              <Card
+                  theme={theme.third_card}
+                  text={"Contact Us"}
+                  secondtext={"Have Some Questions?"}
+                  textstyle={theme.text_style3}
+                  smtext={theme.sm_text3}
+
+              />
           </div>
+
+
+
 
       </div>
     </main>
