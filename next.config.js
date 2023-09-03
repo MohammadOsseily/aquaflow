@@ -1,5 +1,5 @@
 const nextConfig = {
-
+    output: 'export';
     reactStrictMode: false,
     basePath: '/aquaflow',
     images: {
