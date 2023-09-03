@@ -4,8 +4,8 @@ const nextConfig = {
     basePath: '/aquaflow',
     images: {
         loader: 'akamai',
-
-        path: '/',
+        domains : []
+        path: '/aquaflow',
     },
 };
 
