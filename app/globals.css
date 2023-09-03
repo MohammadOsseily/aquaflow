@@ -1,14 +1,13 @@
 *{
-    background-color: #F9F5F6;
+    background-color: #F3F5F6;
 
 }
-body{
-    background: red;
-}
+
 .Mobile{
     display: none;
 }
 .Desktop{
+
     display: block;
 }
 

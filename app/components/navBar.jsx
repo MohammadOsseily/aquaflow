@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import Image from "next/image";
-import img from "/home/mhmd/geekgalaxy/public/images/logo.png"
+import img from "/home/mhmd/aquaflow/public/images/logo.png"
 import styles from "@/styles/navBar.module.css"
 import Link from "next/link";
 import Button from "./Button"
@@ -14,11 +14,11 @@ function navBar(){
 
 
                     <div className="pt-2 d-flex">
-                        <Image width={80} height={60} src={"/images/logo.png"} alt={"logo"}></Image>
-                        <div className={` ${styles.menulinks} p-4`}><Link className={` ${styles.menulinks}`} href="#">Products</Link></div>
-                        <div className={` ${styles.menulinks} p-4`}><Link className={` ${styles.menulinks}`} href="#">About</Link></div>
-                        <div className={` ${styles.menulinks} p-4`}><Link className={` ${styles.menulinks}`} href="#">Contact us</Link></div>
-                        <div className={` ${styles.menulinks} p-4`}><Link className={` ${styles.menulinks}`} href="#">FAQ</Link></div>
+                        <a href="/"><Image width={80} height={60} src={"/images/logo.png"} alt={"logo"}></Image></a>
+                        <div className={` ${styles.menulinks} p-4`}><Link className={` ${styles.menulinks}`} href="/products">Products</Link></div>
+                        <div className={` ${styles.menulinks} p-4`}><Link className={` ${styles.menulinks}`} href="/about">About Us</Link></div>
+                        <div className={` ${styles.menulinks} p-4`}><Link className={` ${styles.menulinks}`} href="/contactUs">Contact us</Link></div>
+
                     </div>
 
                     <div className={`d-flex align-items-center rounded-pill ${styles.div_button} neumorphism`} >
