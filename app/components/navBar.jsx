@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import Image from "next/image";
-import img from "/home/mhmd/aquaflow/public/images/logo.png"
 import styles from "@/styles/navBar.module.css"
 import Link from "next/link";
 import Button from "./Button"
