@@ -4,9 +4,9 @@ const nextConfig = {
     basePath: '/aquaflow',
     images: {
         loader: 'akamai',
-        domains : [],
-        path: '/aquaflow',
+        path: '',
     },
+    assetPrefix: './',
 };
 
 module.exports = nextConfig;
