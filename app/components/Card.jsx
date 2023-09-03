@@ -1,3 +1,4 @@
+'use client'
 import styles from "/styles/Card.module.css"
 import Image from "next/image";
 import CartButton from "@/app/components/CartButton";

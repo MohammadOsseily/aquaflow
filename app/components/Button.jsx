@@ -1,3 +1,4 @@
+'use client'
 import styles from "@/styles/Button.module.css"
 import Image from "next/image";
 function Button(props){
