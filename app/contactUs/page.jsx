@@ -1,4 +1,4 @@
-'use client'
+
 function ContactUs(){
     return(
         <div className={` mx-auto`} style={{width: "65%"}}>

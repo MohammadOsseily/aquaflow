@@ -1,4 +1,4 @@
-'use client'
+
 function About(){
     return(
         <div className={` mx-auto`} style={{width: "65%"}}>

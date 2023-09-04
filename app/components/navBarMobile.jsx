@@ -1,4 +1,4 @@
-'use client'
+
 import styles from "styles/navBarMobile.module.css"
 import Image from "next/image";
 function navBarMobile(){

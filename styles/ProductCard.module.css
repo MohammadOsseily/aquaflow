@@ -1,0 +1,18 @@
+.card{
+    background-color: white;
+}
+.img{
+    background-color: transparent;
+    width: 100% !important;
+    margin-left: 5px;
+    border-radius: 12px;
+}
+.text{
+    font-size: 20px;
+
+}
+.div_button{
+    height: fit-content;
+
+    background-color: white;
+}

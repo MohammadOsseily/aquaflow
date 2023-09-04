@@ -1,4 +1,4 @@
-'use client'
+
 import styles from "/styles/CartButton.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCartShopping} from "@fortawesome/free-solid-svg-icons"
@@ -15,7 +15,7 @@ function CartButton(){
                     Shop
                 </div>
                 <div className={`bg-transparent ${styles.mainText}`}>
-                    <a href="#" >All Products</a>
+                    <a href="/products" >All Products</a>
                 </div>
             </div>
             <div className={`w-25 ${styles.border}  flex-shrink-1 bd-highlight bg-transparent`}>

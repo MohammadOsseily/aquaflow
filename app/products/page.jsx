@@ -1,8 +1,13 @@
-'use client'
+
+import Productcard from "../components/ProductCard"
 function Page(){
     return(
-        <div>
-            kiko
+        <div className={` mx-auto`} style={{width: "65%"}}>
+            <div className={`row`}>
+                <Productcard className={`col `}/>
+
+            </div>
+
         </div>
     )
 }

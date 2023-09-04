@@ -1,18 +1,18 @@
 import Image from 'next/image'
 import  NavBar from "./components/navBar"
-import { Roboto } from 'next/font/google'
+import { Nunito } from 'next/font/google'
 import NavBarMobile from "./components/navBarMobile"
 import Card from "./components/Card";
 import theme from "/styles/Card.module.css"
 
-const roboto = Roboto({
-    weight: '400',
+const nunito = Nunito({
+    weight: '500',
     subsets: ['latin'],
 })
 
 export default function Home() {
   return (
-        <main className={` ${roboto.className}  mx-auto`} style={{backgroundColor: "lightblue", width: "65%"} }>
+        <main className={` ${nunito.className}  mx-auto`} style={{backgroundColor: "lightblue", width: "65%"} }>
       <div className="row  " >
           <div className="col">
               <Card
