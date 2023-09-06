@@ -1,10 +1,13 @@
 .card{
+
     background-color: white;
+
 }
 .img{
     background-color: transparent;
+    position: static !important;
     width: 100% !important;
-    margin-left: 5px;
+    height: 200px !important;
     border-radius: 12px;
 }
 .text{

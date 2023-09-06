@@ -17,4 +17,17 @@
     color: black;
     border:white ;
 }
-
+.btn_productb{
+    width: 100%;
+    height: 100%;
+    background-color: #343A40;
+    color: white;
+    border:black ;
+}
+.btn_productw{
+    width: 100%;
+    height: 100%;
+    background: white;
+    color: black;
+    border:white ;
+}
