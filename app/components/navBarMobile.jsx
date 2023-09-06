@@ -18,14 +18,14 @@ function navBarMobile(){
 
 
                     <ul id={styles.menu}>
-                        <a href="#"><li>Products</li></a>
-                        <a href="#"><li>About</li></a>
-                        <a href="#"><li>Contact us</li></a>
-                        <a href="#"><li>FAQ</li></a>
+                        <a href="/products"><li>Products</li></a>
+                        <a href="/about"><li>About</li></a>
+                        <a href="/contactUs"><li>Contact us</li></a>
+
 
                     </ul>
                 </div>
-                <Image className={"m-"} style={{margin: "35px"}} width={80} height={60} src={"/images/logo.png"} alt={"logo"}></Image>
+                <a href="/"><Image className={"m-"} style={{margin: "35px"}} width={80} height={60} src={"/images/logo.png"} alt={"logo"}></Image></a>
             </nav>
 
         </>

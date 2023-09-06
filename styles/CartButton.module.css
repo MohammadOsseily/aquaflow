@@ -33,3 +33,11 @@
     background-color: transparent;
     cursor: pointer;
 }
+.btnMobile{
+    border-radius: 12px;
+    background-color: #E1E3E7;
+    margin-top: 60px;
+    margin-left: 35px;
+    width: 180px;
+    height: 60px;
+}

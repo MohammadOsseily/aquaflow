@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       <div class= "Desktop">
         <NavBar/>
       </div>
-      {children}
+          {children}
       </body>
     </html>
   )
