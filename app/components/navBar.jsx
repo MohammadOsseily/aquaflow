@@ -22,7 +22,7 @@ function navBar(){
                     </div>
 
                     <div className={`d-flex align-items-center rounded-pill ${styles.div_button} neumorphism`} >
-                        <Button title="Login" theme={themes.btn_white}/>
+                       <Link className={`bg-transparent`} href="/auth/login" ><Button title="Login" theme={themes.btn_white}/> </Link>
                         <Button title="Sign Up" theme={themes.btn_black}/>
                     </div>
 
