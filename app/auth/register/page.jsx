@@ -1,8 +1,8 @@
-import styles from "/styles/Login.module.css"
+import styles from "/styles/Register.module.css"
 
-function Login(){
+function Register(){
     return(
-        <form className={` neumorphism ${styles.login}`} style={{marginTop : "100px"}}>
+        <form className={` neumorphism ${styles.register}`} style={{marginTop : "100px"}}>
             <h2>Welcome, User!</h2>
             <p>Please log in</p>
             <input type="text" placeholder="User Name" />
@@ -13,7 +13,6 @@ function Login(){
                 <a href="/auth/register">Register</a>
             </div>
         </form>
-
     )
 }
-export default Login;
+export default Register;
