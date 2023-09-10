@@ -1,3 +1,4 @@
+'use client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styles from "/styles/ProductCard.module.css"
 import Image from "next/image";

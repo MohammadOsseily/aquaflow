@@ -11,13 +11,14 @@
 
 }
 .login input {
+
     width: 100%;
     display: block;
     box-sizing: border-box;
     margin: 10px 0;
     padding: 14px 12px;
     font-size: 16px;
-    border-radius: 2px;
+    border-radius: 12px;
     font-family: Raleway, sans-serif;
 }
 
@@ -28,9 +29,12 @@
 }
 
 .login input[type=text]:hover {
-
+    border-color: #8B8B8B;
     outline: none;
     transition: all .2s ease-in-out;
+}
+.login input[type=password]:hover{
+    border-color: #8B8B8B;
 }
 
 .login input[type=submit] {
@@ -43,12 +47,12 @@
 }
 
 .login input[type=submit]:hover {
-    background: #F44336;
+    background: #343A40;
 }
 
 .login h2 {
     margin: 20px 0 0;
-    color: #EF5350;
+    color: #343A40;
     font-size: 28px;
 }
 

@@ -11,14 +11,22 @@
 
 }
 .register input {
+    border-color: red;
     width: 100%;
     display: block;
     box-sizing: border-box;
     margin: 10px 0;
     padding: 14px 12px;
     font-size: 16px;
-    border-radius: 2px;
+    border-radius: 12px;
     font-family: Raleway, sans-serif;
+}
+.register input :focus-visible{
+    border-color: red;
+}
+
+.register input {
+    border-color: red;
 }
 
 .register input[type=text],
@@ -28,9 +36,12 @@
 }
 
 .register input[type=text]:hover {
-
+    border-color: #8B8B8B;
     outline: none;
     transition: all .2s ease-in-out;
+}
+.register input[type=password]:hover{
+    border-color: #8B8B8B;
 }
 
 .register input[type=submit] {
@@ -43,12 +54,12 @@
 }
 
 .register input[type=submit]:hover {
-    background: #F44336;
+    background: #343A40;
 }
 
 .register h2 {
     margin: 20px 0 0;
-    color: #EF5350;
+    color: #343A40;
     font-size: 28px;
 }
 

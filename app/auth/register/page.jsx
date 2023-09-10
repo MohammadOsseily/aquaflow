@@ -4,10 +4,11 @@ function Register(){
     return(
         <form className={` neumorphism ${styles.register}`} style={{marginTop : "100px"}}>
             <h2>Welcome, User!</h2>
-            <p>Please log in</p>
-            <input type="text" placeholder="User Name" />
+            <p>Please sign up</p>
+            <input type="text" placeholder="Email" />
             <input type="password" placeholder="Password" />
-            <input type="submit" value="Log In" />
+            <input type="password" placeholder="Confirm Password" />
+            <input className={` rounded-pill`} type="submit" value="Log In" />
             <div className={`${styles.links}`}>
                 <a href="/auth/forgetPass">Forgot password</a>
                 <a href="/auth/register">Register</a>

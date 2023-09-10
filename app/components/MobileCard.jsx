@@ -1,3 +1,4 @@
+'use client'
 import styles from "/styles/Mobile.module.css"
 
 function MobileCard(props){
