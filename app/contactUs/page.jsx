@@ -1,7 +1,10 @@
+import Link from "next/link";
+
 
 function ContactUs(){
     return(
         <div className={` mx-auto`} style={{width: "65%"}}>
+
             <div className={`mx-auto w-75 `}>
                 <div style={{fontSize:"40px", textAlign: "center", padding: "40px 0px"}}>Contact Us</div>
 

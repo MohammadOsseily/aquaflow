@@ -6,8 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { PiArrowUpRightBold } from 'react-icons/pi';
 import { BsSend } from 'react-icons/bs';
 
-
-
 function Card(props){
 
     return(
