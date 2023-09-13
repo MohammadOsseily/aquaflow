@@ -18,10 +18,13 @@
     font-size: 30px;
     font-weight: bold;
     background-color: transparent;
+    margin-left: 10px;
+
 
 }
 .companyName{
     color: red;
+    margin-left: 10px;
     text-decoration: none;
     margin-bottom: 10px;
     background-color: transparent;
@@ -31,5 +34,7 @@
 }
 .smText{
     background-color: transparent;
+    font-size: 20px;
+    margin-left: 10px;
 
 }

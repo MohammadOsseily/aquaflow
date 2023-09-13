@@ -19,7 +19,7 @@ function ProductCard(props){
 
                     <div className={`card d-flex flex-column bd-highlight mb-3`} style={{ backgroundColor: "transparent", paddingTop: "10px", border: "0px" ,positon:"relative"}}>
 
-                        <Link href="/productDetailes"><Image className={` ${styles.img} mx-auto  bd-highlight`} fill src={props.img}/></Link>
+                        <Link className={`bg-transparent`} href="/productDetailes"><Image className={` ${styles.img} mx-auto  bd-highlight`} fill src={props.img}/></Link>
                         <div className="card-content bg-transparent   bd-highlight">
                             <div className={`${styles.text} bg-transparent d-flex justify-content-center bd-highlight my-4  `}>{props.productName}</div>
                             <div className={` bg-transparent d-flex justify-content-center`} >
