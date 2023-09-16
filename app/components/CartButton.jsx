@@ -37,7 +37,7 @@ function CartButton(){
                             </div>
                         </div>
                         <div className={`w-25 ${styles.border}  flex-shrink-1 bd-highlight bg-transparent`}>
-                            <PiShoppingCartThin size={27} style={{transform : "scaleX(-1)", marginLeft:"5px", height : "100%", backgroundColor: "transparent"}}/>
+                            <a href="/products"><PiShoppingCartThin size={27} style={{transform : "scaleX(-1)", marginLeft:"5px", height : "100%", backgroundColor: "transparent"}}/></a>
                         </div>
                     </button>
             </div>

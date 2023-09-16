@@ -7,6 +7,7 @@ import Button from "../components/Button"
 
 
 function ProductDetailes(){
+
     return(
         <div className={`${styles.container}  mt-4 mx-auto`}>
             <Image className={`${styles.productImg} neumorphism`} src="/images/black-bottle.png" width={550} height={550} alt="bottle"/>

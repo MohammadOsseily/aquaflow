@@ -1,0 +1,208 @@
+/* Global "table" column settings */
+.product-image { float: left; width: 20%; }
+.product-details { float: left; width: 37%; }
+.product-price { float: left; width: 12%; }
+.product-quantity { float: left; width: 10%; }
+.product-removal { float: left; width: 9%; }
+.product-line-price { float: left; width: 12%; text-align: right; }
+
+
+/* This is used as the traditional .clearfix class */
+.group:before,
+.group:after {
+    content: '';
+    display: table;
+}
+.group:after {
+    clear: both;
+}
+.group {
+    zoom: 1;
+}
+
+
+/* Apply clearfix in a few places */
+.shopping-cart, .column-labels, .product, .totals-item {
+    @extend .group;
+}
+
+
+/* Apply dollar signs */
+.product .product-price:before, .product .product-line-price:before, .totals-value:before {
+    content: '$';
+}
+
+
+.shopping-cart {
+    margin-top: -45px;
+}
+
+
+/* Column headers */
+.columnlabels {
+
+
+    .product-image, .product-details, .product-removal {
+        text-indent: -9999px;
+    }
+}
+
+
+/* Product entries */
+.product {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $color-border;
+
+    .productimage {
+        text-align: center;
+
+    }
+
+    .productdetails {
+        .producttitle {
+            margin-right: 20px;
+            font-family: $font-bold;
+        }
+        .productdescription {
+            margin: 5px 20px 5px 0;
+            line-height: 1.4em;
+        }
+    }
+
+    .productquantity {
+
+    }
+
+    .removeproduct {
+        border: 0;
+        padding: 4px 8px;
+        background-color: #c66;
+        color: #fff;
+        font-family: $font-bold;
+        font-size: 12px;
+        border-radius: 3px;
+    }
+
+    .removeproduct:hover {
+        background-color: #a44;
+    }
+}
+
+
+/* Totals section */
+.totals {
+    .totalsitem {
+        float: right;
+        clear: both;
+        width: 100%;
+        margin-bottom: 10px;
+
+
+
+        .totalsvalue {
+            float: right;
+            width: 21%;
+            text-align: right;
+        }
+    }
+
+    .totalsitemtotal {
+        font-family: $font-bold;
+    }
+}
+
+.checkout {
+    float: right;
+    border: 0;
+    margin-top: 20px;
+    padding: 6px 25px;
+    background-color: #6b6;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 3px;
+}
+
+.checkout:hover {
+    background-color: #494;
+}
+
+/* Make adjustments for tablet */
+@media screen and (max-width: 650px) {
+
+    .shoppingcart {
+        margin: 0;
+        padding-top: 20px;
+        border-top: 1px solid $color-border;
+    }
+
+    .columnlabels {
+        display: none;
+    }
+
+    .productimage {
+        float: right;
+        width: auto;
+
+    }
+
+    .productdetails {
+        float: none;
+        margin-bottom: 10px;
+        width: auto;
+    }
+
+    .productprice {
+        clear: both;
+        width: 70px;
+    }
+
+    .productquantity {
+        width: 100px;
+
+    }
+
+    .productquantity:before {
+        content: 'x';
+    }
+
+    .productremoval {
+        width: auto;
+    }
+
+    .productlineprice {
+        float: right;
+        width: 70px;
+    }
+
+}
+
+
+/* Make more adjustments for phone */
+@media screen and (max-width: 350px) {
+
+    .productremoval {
+        float: right;
+    }
+
+    .productlineprice {
+        float: right;
+        clear: left;
+        width: auto;
+        margin-top: 10px;
+    }
+
+    .product .productlineprice:before {
+        content: 'Item Total: $';
+    }
+
+    .totals {
+        .totalsitem {
+
+
+            .totalsvalue {
+                width: 40%;
+            }
+        }
+    }
+}
