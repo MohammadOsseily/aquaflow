@@ -4,8 +4,8 @@ import Image from "next/image";
 
 function Cart(){
 
-    return(<>
-        <h1>Shopping Cart</h1>
+    return(<div className={`mx-auto`} style={{width : "65%"}}>
+        <h1 style={{marginBottom : "90px"}}>Shopping Cart</h1>
 
         <div className={`${styles.shoppingcart}`}>
 
@@ -20,7 +20,7 @@ function Cart(){
 
             <div className={`${styles.product}`}>
                 <div className={`${styles.productimage}`}>
-                    <Image  src="/images/black-bottle.png" width={550} height={550} alt="bottle"/>
+                    <Image  src="/images/black-bottle.png" width={200} height={200} alt="bottle"/>
                 </div>
                 <div className={`${styles.productdetails}`}>
                     <div className={`${styles.producttitle}`}>Dingo Dog Bones</div>
@@ -28,7 +28,7 @@ function Cart(){
                 </div>
                 <div className={`${styles.productprice}`}>12.99</div>
                 <div className={`${styles.productquantity}`}>
-                    <input type="number" value="2" min="1"/>
+                    <input style={{width : "40px"}} type="number" value="2" min="1"/>
                 </div>
                 <div className={`${styles.productremoval}`}>
                     <button className={`${styles.removeproduct}`}>
@@ -40,7 +40,7 @@ function Cart(){
 
             <div className={`${styles.product}`}>
                 <div className={`${styles.productimage}`}>
-                    <Image  src="/images/black-bottle.png" width={550} height={550} alt="bottle"/>
+                    <Image  src="/images/black-bottle.png" width={200} height={200} alt="bottle"/>
                 </div>
                 <div className={`${styles.productdetails}`}>
                     <div className={`${styles.producttitle}`}>Nutro™ Adult Lamb and Rice Dog Food</div>
@@ -48,7 +48,7 @@ function Cart(){
                 </div>
                 <div className={`${styles.productprice}`}>45.99</div>
                 <div className={`${styles.productquantity}`}>
-                    <input type="number" value="1" min="1"/>
+                    <input style={{width : "40px"}} type="number" value="1" min="1"/>
                 </div>
                 <div className={`${styles.productremoval}`}>
                     <button className={`${styles.removeproduct}`}>
@@ -60,19 +60,19 @@ function Cart(){
 
             <div className={`${styles.totals}`}>
                 <div className={`${styles.totalsitem}`}>
-                    <label>Subtotal</label>
+                    <label style={{float: "left", clear : "both", width: "79%", textAlign: "right"}}>Subtotal</label>
                     <div class={`${styles.totalsvalue}`} id={`${styles.cartsubtotal}`}>71.97</div>
                 </div>
                 <div class={`${styles.totalsitem}`}>
-                    <label>Tax (5%)</label>
+                    <label style={{float: "left", clear : "both", width: "79%", textAlign: "right"}}>Tax (5%)</label>
                     <div class={`${styles.totalsvalue}`} id={`${styles.carttax}`}>3.60</div>
                 </div>
                 <div class={`${styles.totalsitem}`}>
-                    <label>Shipping</label>
+                    <label style={{float: "left", clear : "both", width: "79%", textAlign: "right"}}>Shipping</label>
                     <div class={`${styles.totalsvalue}`} id={`${styles.cartshipping}`}>15.00</div>
                 </div>
                 <div class={`${styles.totalsitem} ${styles.totalsitemtotal}`}>
-                    <label>Grand Total</label>
+                    <label style={{float: "left", clear : "both", width: "79%", textAlign: "right"}}>Grand Total</label>
                     <div class={`${styles.totalsvalue}`} id={`${styles.carttotal}`}>90.57</div>
                 </div>
             </div>
@@ -80,7 +80,7 @@ function Cart(){
             <button class={`${styles.checkout}`}>Checkout</button>
 
         </div>
-    </>
+    </div>
     )
 }
 
