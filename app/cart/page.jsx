@@ -1,86 +1,136 @@
 import styles from "/styles/Cart.module.css"
 import Image from "next/image";
-
+import Button from "../components/Button"
 
 function Cart(){
 
-    return(<div className={`mx-auto`} style={{width : "65%"}}>
-        <h1 style={{marginBottom : "90px"}}>Shopping Cart</h1>
+    return(
+        <div className={`mx-auto`} style={{width : "65%"}}>
+            {/*<div className={`d-flex justify-content-between`}>*/}
+            {/*    */}
+            {/*    <div className={`d-flex flex-column`}>*/}
+            {/*        <div style={{fontSize : "30px"}}> Shopping Cart</div>*/}
+            {/*        <Image src={"/images/black-bottle.png"} width={200} height={200} alt={"bottle"}/>*/}
+            {/*        <Image src={"/images/black-bottle.png"} width={200} height={200} alt={"bottle"}/>*/}
+            {/*    </div>*/}
+            {/*    */}
+            {/*    <div className={`d-flex flex-column`}>*/}
+            {/*        <div style={{fontSize : "20px"}} > Product</div>*/}
+            {/*        <div className={`d-flex align-items-center`} style={{width : "400px" , height : "200px"}}>*/}
+            {/*            <div >Dingo Dog Bones</div>*/}
+            {/*        </div>*/}
+            {/*        <div className={`d-flex align-items-center`} style={{width : "400px" , height : "200px"}}>*/}
+            {/*            <div >Dingo Dog Bones</div>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*    */}
 
-        <div className={`${styles.shoppingcart}`}>
+                {/*<div className={`d-flex flex-column`}>*/}
+                {/*    <div style={{fontSize : "20px"}} > Price</div>*/}
+                {/*    <div style={{height : "200px"}} className={` d-flex align-items-center`}>12$</div>*/}
+                {/*    <div style={{height : "200px"}} className={` d-flex align-items-center`}>12$</div>*/}
+                {/*</div>*/}
 
-            <div className="column-labels">
-                <label className={`${styles.productimage}`}>Image</label>
-                <label className={`${styles.productdetails}`}>Product</label>
-                <label className={`${styles.productprice}`}>Price</label>
-                <label className={`${styles.productquantity}`}>Quantity</label>
-                <label className={`${styles.productremoval}`}>Remove</label>
-                <label className={`${styles.productlineprice}`}>Total</label>
+            {/*    */}
+            {/*    <div className={`d-flex flex-column`}>*/}
+            {/*        <div className={`d-flex align-items-center`} style={{fontSize : "20px"}} > Quantity</div>*/}
+            {/*        <div style={{height : "200px"}} className={`d-flex align-items-center`}>*/}
+            {/*            <div className={`d-flex align-items-center rounded-pill ${styles.div_button} neumorphism `} >*/}
+            {/*                <Button theme={styles.btn_white} title="-" />*/}
+            {/*                <div style={{backgroundColor : "transparent"}}>1</div>*/}
+            {/*                <Button theme={styles.btn_black} title="+" />*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*        <div style={{height : "200px"}} className={`d-flex align-items-center`}>*/}
+            {/*            <div className={`d-flex align-items-center rounded-pill ${styles.div_button} neumorphism `} >*/}
+            {/*                <Button theme={styles.btn_white} title="-" />*/}
+            {/*                <div style={{backgroundColor : "transparent"}}>1</div>*/}
+            {/*                <Button theme={styles.btn_black} title="+" />*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+
+                {/*<div className={`d-flex flex-column `}>*/}
+                {/*    <div style={{fontSize : "20px"}} > Remove</div>*/}
+                {/*    <div style={{height : "200px"}}  className={` d-flex align-items-center`}  >*/}
+                {/*        <button     className={` ${styles.removeProduct}   neumorphism d-flex`}>*/}
+                {/*            Remove*/}
+                {/*        </button>*/}
+                {/*    </div>*/}
+                {/*    <div style={{height : "200px"}}  className={` d-flex align-items-center`}  >*/}
+                {/*        <button     className={` ${styles.removeProduct}   neumorphism d-flex`}>*/}
+                {/*            Remove*/}
+                {/*        </button>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
+
+                {/*<div className={`d-flex flex-column`}>*/}
+                {/*    <div style={{fontSize : "20px"}} > Total</div>*/}
+                {/*    <div style={{height : "200px"}} className={` d-flex align-items-center`}>12$</div>*/}
+                {/*    <div style={{height : "200px"}} className={` d-flex align-items-center`}>12$</div>*/}
+                {/*</div>*/}
+            {/*</div>*/}
+            <div className={`row`}>
+                <div className={`col-xl-3 col-m-2 col-sm-0`}>
+                    <div style={{fontSize : "30px"}}> Shopping Cart</div>
+                    <Image src={"/images/black-bottle.png"} width={200} height={200} alt={"bottle"}/>
+                    <Image src={"/images/black-bottle.png"} width={200} height={200} alt={"bottle"}/>
+                </div>
+                <div className={`col-xl-2 col-m-1 col-sm-0`}>
+                    <div style={{fontSize : "18px", marginTop : "10px" , color : "#99A7B4"}} > Product</div>
+                    <div className={`d-flex align-items-center`} style={{width : "400px" , height : "200px"}}>
+                        <div >Dingo Dog Bones</div>
+                    </div>
+                    <div className={`d-flex align-items-center`} style={{width : "400px" , height : "200px"}}>
+                        <div >Dingo Dog Bones</div>
+                    </div>
+                </div>
+                <div className={`col-xl-2 col-m-1 col-sm-0`}>
+                    <div style={{fontSize : "18px", marginTop : "10px" , color : "#99A7B4"}} >Price</div>
+                    <div style={{height : "200px"}} className={` d-flex align-items-center`}>12$</div>
+                    <div style={{height : "200px"}} className={` d-flex align-items-center`}>12$</div>
+                </div>
+                <div className={`col-xl-2 col-m-1`}>
+                    <div className={`d-flex align-items-center`} style={{fontSize : "18px" , marginTop : "10px" , color : "#99A7B4"}} > Quantity</div>
+                    <div style={{height : "200px"}} className={`d-flex align-items-center`}>
+                        <div className={`d-flex align-items-center rounded-pill ${styles.div_button} neumorphism `} >
+                            <Button theme={styles.btn_white} title="-" />
+                            <div style={{backgroundColor : "transparent"}}>1</div>
+                            <Button theme={styles.btn_black} title="+" />
+                        </div>
+                    </div>
+                    <div style={{height : "200px"}} className={`d-flex align-items-center`}>
+                        <div className={`d-flex align-items-center rounded-pill ${styles.div_button} neumorphism `} >
+                            <Button theme={styles.btn_white} title="-" />
+                            <div style={{backgroundColor : "transparent"}}>1</div>
+                            <Button theme={styles.btn_black} title="+" />
+                        </div>
+                    </div>
+                </div>
+                <div className={`col-xl-2 col-m-1 col-sm-0`}>
+                    <div style={{fontSize : "18px" , marginTop : "10px" , color : "#99A7B4"}} > Remove</div>
+                    <div style={{height : "200px"}}  className={` d-flex align-items-center`}  >
+                        <button     className={` ${styles.removeProduct}   neumorphism d-flex`}>
+                            Remove
+                        </button>
+                    </div>
+                    <div style={{height : "200px"}}  className={` d-flex align-items-center`}  >
+                        <button     className={` ${styles.removeProduct}   neumorphism d-flex`}>
+                            Remove
+                        </button>
+                    </div>
+                </div>
+                <div className={`col-xl-1 col-m-1 col-sm-0`}>
+                    <div style={{fontSize : "18px", marginTop : "10px" , color : "#99A7B4"}} > Total</div>
+                    <div style={{height : "200px"}} className={` d-flex align-items-center`}>12$</div>
+                    <div style={{height : "200px"}} className={` d-flex align-items-center`}>12$</div>
+                </div>
+
+
+
             </div>
-
-            <div className={`${styles.product}`}>
-                <div className={`${styles.productimage}`}>
-                    <Image  src="/images/black-bottle.png" width={200} height={200} alt="bottle"/>
-                </div>
-                <div className={`${styles.productdetails}`}>
-                    <div className={`${styles.producttitle}`}>Dingo Dog Bones</div>
-                    <p className={`${styles.productdescription}`}>The best dog bones of all time. Holy crap. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.</p>
-                </div>
-                <div className={`${styles.productprice}`}>12.99</div>
-                <div className={`${styles.productquantity}`}>
-                    <input style={{width : "40px"}} type="number" value="2" min="1"/>
-                </div>
-                <div className={`${styles.productremoval}`}>
-                    <button className={`${styles.removeproduct}`}>
-                        Remove
-                    </button>
-                </div>
-                <div className={`${styles.productlineprice}`}>25.98</div>
-            </div>
-
-            <div className={`${styles.product}`}>
-                <div className={`${styles.productimage}`}>
-                    <Image  src="/images/black-bottle.png" width={200} height={200} alt="bottle"/>
-                </div>
-                <div className={`${styles.productdetails}`}>
-                    <div className={`${styles.producttitle}`}>Nutro™ Adult Lamb and Rice Dog Food</div>
-                    <p className={`${styles.productdescription}`}>Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p>
-                </div>
-                <div className={`${styles.productprice}`}>45.99</div>
-                <div className={`${styles.productquantity}`}>
-                    <input style={{width : "40px"}} type="number" value="1" min="1"/>
-                </div>
-                <div className={`${styles.productremoval}`}>
-                    <button className={`${styles.removeproduct}`}>
-                        Remove
-                    </button>
-                </div>
-                <div className={`${styles.productlineprice}`}>45.99</div>
-            </div>
-
-            <div className={`${styles.totals}`}>
-                <div className={`${styles.totalsitem}`}>
-                    <label style={{float: "left", clear : "both", width: "79%", textAlign: "right"}}>Subtotal</label>
-                    <div class={`${styles.totalsvalue}`} id={`${styles.cartsubtotal}`}>71.97</div>
-                </div>
-                <div class={`${styles.totalsitem}`}>
-                    <label style={{float: "left", clear : "both", width: "79%", textAlign: "right"}}>Tax (5%)</label>
-                    <div class={`${styles.totalsvalue}`} id={`${styles.carttax}`}>3.60</div>
-                </div>
-                <div class={`${styles.totalsitem}`}>
-                    <label style={{float: "left", clear : "both", width: "79%", textAlign: "right"}}>Shipping</label>
-                    <div class={`${styles.totalsvalue}`} id={`${styles.cartshipping}`}>15.00</div>
-                </div>
-                <div class={`${styles.totalsitem} ${styles.totalsitemtotal}`}>
-                    <label style={{float: "left", clear : "both", width: "79%", textAlign: "right"}}>Grand Total</label>
-                    <div class={`${styles.totalsvalue}`} id={`${styles.carttotal}`}>90.57</div>
-                </div>
-            </div>
-
-            <button class={`${styles.checkout}`}>Checkout</button>
 
         </div>
-    </div>
     )
 }
 
