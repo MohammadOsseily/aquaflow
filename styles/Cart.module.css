@@ -31,3 +31,12 @@
     background-color: white;
 
 }
+.checkOut {
+    border: 0;
+    margin-top: 20px;
+    padding: 6px 25px;
+    background-color: #343A40;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 12px;
+}
