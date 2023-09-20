@@ -86,7 +86,7 @@ function Cart(){
                     </div>
                     <div className={`row `}>
                         <div className={`d-flex justify-content-end`}>
-                            <Link href={"#"}> <button className={` ${styles.checkOut} neumorphism rounded-pill`}>CHECK OUT</button> </Link>
+                            <Link href={"/checkout"}> <button className={` ${styles.checkOut} neumorphism rounded-pill`}>CHECK OUT</button> </Link>
                             </div>
 
                     </div>
