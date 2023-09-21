@@ -4,9 +4,10 @@
     background-color: #343A40;
     color: white;
     border:black ;
+    transition: 0.2s;
 }
 .btn_black:hover{
-    background-color: #343A40;
+    background: #8B8B8B;
     color: white;
 
 }
