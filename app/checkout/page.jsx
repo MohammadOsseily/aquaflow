@@ -96,7 +96,7 @@ function Checkout(){
 
 
                     </div>
-                    <div>
+                    <div className={` mb-5`}>
                         <div className={` `} style={{fontSize : "30px", marginTop : "20px"}}> Customer</div>
                         <div  style={{border : "1px solid #c0c0c0", borderRadius : "12px" ,height : "100%" }}>
                             <div className={` form-check d-flex align-items-center`} style={{width : "90%", height : "50px",marginTop : "15px" , marginLeft : "15px"}}>
@@ -115,6 +115,10 @@ function Checkout(){
 
 
                         </div>
+                        <div className={`${styles.buttonHover}`}>
+                            <input className={` ${styles.orderButton} rounded-pill`} type="submit" value="Place Order" />
+                        </div>
+
                     </div>
                 </div>
                 <div className={`col-4`}>
