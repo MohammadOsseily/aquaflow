@@ -1,12 +1,4 @@
-const nextConfig = {
-    output: 'export',
-    reactStrictMode: false,
-    basePath: '/aquaflow',
-    images: {
-        loader: 'akamai',
-        path: '',
-    },
-    assetPrefix: '/aquaflow',
-};
+/** @type {import('next').NextConfig} */
+const nextConfig = { reactStrictMode: true, basePath: '' };
 
 module.exports = nextConfig;
