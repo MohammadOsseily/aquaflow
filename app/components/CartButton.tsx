@@ -5,7 +5,7 @@ import { PiShoppingCartThin } from 'react-icons/pi';
 function CartButton() {
     return (
         <>
-            <div className='Desktop bg-transparent'>
+            <div>
                 <button>
                     <div>
                         <div>Shop</div>
@@ -16,6 +16,8 @@ function CartButton() {
                     <div>
                         <PiShoppingCartThin
                             size={35}
+
+
                             style={{
                                 transform: 'scaleX(-1)',
                                 marginLeft: '5px',
