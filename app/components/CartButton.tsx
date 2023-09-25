@@ -16,8 +16,6 @@ function CartButton() {
                     <div>
                         <PiShoppingCartThin
                             size={35}
-
-
                             style={{
                                 transform: 'scaleX(-1)',
                                 marginLeft: '5px',
