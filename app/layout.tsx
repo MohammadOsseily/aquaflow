@@ -15,7 +15,7 @@ const roboto = Roboto({
 export default function RootLayout({ children }: { children: ReactNode[] }) {
     return (
         <html lang='en'>
-            <body className={`${roboto.className} mx-auto w-full md:w-3/4`}>
+            <body className={`${roboto.className} mx-auto h-screen min-h-screen w-full md:w-3/4`}>
                 <NavBar />
                 {children}
             </body>
