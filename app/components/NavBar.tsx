@@ -1,10 +1,11 @@
 'use client';
+import Image from 'next/image';
 
 function NavBar() {
     return (
         <div className='navbar bg-base-100'>
             <div className='navbar-start'>
-                <div className='dropdown'>
+                <div className='dropdown md:hidden'>
                     <label tabIndex={0} className='btn btn-circle btn-ghost'>
                         <svg
                             xmlns='http://www.w3.org/2000/svg'
@@ -34,10 +35,18 @@ function NavBar() {
                         </li>
                     </ul>
                 </div>
+                <a className=''>
+                    <Image src={'/static/images/logo.png'} width={70} height={70} alt='logo' />
+                </a>
+                <div className='flex w-full content-between'>
+                    <div>
+                        <a href='#'>Product</a>
+                    </div>
+                    <div>About</div>
+                    <div>Contact Us</div>
+                </div>
             </div>
-            <div className='navbar-center'>
-                <a className='btn btn-ghost text-xl normal-case'>daisyUI</a>
-            </div>
+
             <div className='navbar-end'>
                 <button className='btn btn-circle btn-ghost'>
                     <svg

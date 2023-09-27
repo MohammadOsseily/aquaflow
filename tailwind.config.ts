@@ -17,7 +17,7 @@ const config: Config = {
 
                     accent: '#B2F042',
 
-                    neutral: '#B2F042',
+                    neutral: '#262626',
 
                     'base-100': '#ffffff',
 
@@ -28,6 +28,10 @@ const config: Config = {
                     warning: '#fbbd23',
 
                     error: '#f87272',
+                },
+                screens: {
+                    mmd: { max: '767px' },
+                    // => @media (max-width: 767px) { ... }
                 },
             },
         ],
