@@ -10,7 +10,7 @@ function ContactUs() {
 
                 <div>Email:</div>
 
-                <div>mohammd.osseily2@gmail.com</div>
+                <div>mohammad.osseily2@gmail.com</div>
 
                 <div>Our Store Address:</div>
 

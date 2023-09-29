@@ -11,27 +11,15 @@ const config: Config = {
         themes: [
             {
                 mytheme: {
-                    primary: '#393939',
-
-                    secondary: '#C9CCD1',
-
+                    primary: '#F9F7F7',
+                    secondary: '#383838',
                     accent: '#B2F042',
-
-                    neutral: '#262626',
-
+                    neutral: '#C9CCD1',
                     'base-100': '#ffffff',
-
                     info: '#3abff8',
-
                     success: '#36d399',
-
                     warning: '#fbbd23',
-
                     error: '#f87272',
-                },
-                screens: {
-                    mmd: { max: '767px' },
-                    // => @media (max-width: 767px) { ... }
                 },
             },
         ],

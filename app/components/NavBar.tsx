@@ -38,7 +38,7 @@ function NavBar() {
                 <a className=''>
                     <Image src={'/static/images/logo.png'} width={70} height={70} alt='logo' />
                 </a>
-                <div className='flex w-full content-between'>
+                <div className='hidden md:flex md:w-full md:justify-evenly'>
                     <div>
                         <a href='#'>Product</a>
                     </div>
