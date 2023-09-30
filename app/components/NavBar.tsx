@@ -1,10 +1,11 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function NavBar() {
     return (
         <div className='navbar bg-base-100'>
-            <div className='navbar-start'>
+            <div className='navbar-start md:w-full'>
                 <div className='dropdown md:hidden'>
                     <label tabIndex={0} className='btn btn-circle btn-ghost'>
                         <svg
@@ -25,29 +26,29 @@ function NavBar() {
                         tabIndex={0}
                         className='menu dropdown-content rounded-box menu-sm z-[1] mt-3 w-52 bg-base-100 p-2 shadow'>
                         <li>
-                            <a>Homepage</a>
-                        </li>
-                        <li>
-                            <a>Portfolio</a>
+                            <Link href='/ProductCard.tsx'>Product</Link>
                         </li>
                         <li>
                             <a>About</a>
+                        </li>
+                        <li>
+                            <a>Contact Us</a>
                         </li>
                     </ul>
                 </div>
                 <a className=''>
                     <Image src={'/static/images/logo.png'} width={70} height={70} alt='logo' />
                 </a>
-                <div className='hidden md:flex md:w-full md:justify-evenly'>
+                <div className='hidden md:flex md:w-full md:justify-center md:gap-10'>
                     <div>
-                        <a href='#'>Product</a>
+                        <Link href='/products'>Product</Link>
                     </div>
                     <div>About</div>
                     <div>Contact Us</div>
                 </div>
             </div>
 
-            <div className='navbar-end'>
+            <div className='navbar-end md:w-fit'>
                 <button className='btn btn-circle btn-ghost'>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'

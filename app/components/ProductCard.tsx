@@ -1,20 +1,65 @@
 'use client';
 
 import Image from 'next/image';
+import { FiShoppingCart } from 'react-icons/fi';
+import 'react-icons';
+import { Product } from '../../types/product';
+
+import { Pagination } from '../../types/pagination';
 import Link from 'next/link';
 
+type paginationProps = {
+    pagination: Pagination;
+};
+export function Pagination({ pagination }: paginationProps) {
+    return (
+        <div className='join flex w-full justify-center'>
+            {pagination.current_page != 1 && (
+                <Link href={pagination.first_page_url} className='btn join-item'>
+                    1
+                </Link>
+            )}
+
+            {pagination.prev_page_url && (
+                <Link href={pagination.prev_page_url} className='btn join-item'>
+                    {pagination.current_page - 1}
+                </Link>
+            )}
+            <div className='btn join-item btn-active'>{pagination.current_page}</div>
+            {pagination.next_page_url && (
+                <Link href={pagination.next_page_url} className='btn join-item'>
+                    {pagination.current_page + 1}
+                </Link>
+            )}
+            {pagination.last_page_url && pagination.current_page != pagination.last_page && (
+                <Link href={pagination.last_page_url} className='btn join-item'>
+                    {pagination.last_page}
+                </Link>
+            )}
+        </div>
+    );
+}
 type props = {
-    image: string;
-    price: number;
-    productName: string;
+    product: Product;
 };
 
-function ProductCard({ image, price, productName }: props) {
+function ProductCard({ product }: props) {
     return (
-        <Link href='/productDetailes'>
-            {price}
-            <Image alt={productName} fill src={image} />
-        </Link>
+        <div className='card glass flex w-[47%]  items-center pt-4 md:w-[24%]'>
+            <figure>
+                <Image alt={product.productName} width={50} height={50} src={'/static/images/' + product.image} />
+            </figure>
+            <div className='card-body flex justify-between'>
+                <h2 className='card-title flex justify-center'>{product.productName}</h2>
+
+                <div className='card-actions flex  items-center'>
+                    <p className='font-bold'>{product.price}$</p>
+                    <button className='btn btn-primary bg-secondary hover:bg-secondary'>
+                        <FiShoppingCart size={25} className='bg-secondary text-white' />
+                    </button>
+                </div>
+            </div>
+        </div>
     );
 }
 export default ProductCard;

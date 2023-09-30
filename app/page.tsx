@@ -3,6 +3,7 @@ import { FiArrowUpRight } from 'react-icons/fi';
 import { LuSend } from 'react-icons/lu';
 import { FiShoppingCart } from 'react-icons/fi';
 import 'react-icons';
+import Link from 'next/link';
 
 export default function Home() {
     return (
@@ -24,7 +25,9 @@ export default function Home() {
                     <div className='absolute bottom-3 ml-5 flex h-[60px] w-[150px] rounded-xl bg-neutral md:bottom-20 md:ml-10 md:h-fit md:w-fit'>
                         <div className='   border-r-2 border-gray-300 bg-transparent pl-4 pr-4 pt-3'>
                             <div className=' text-[10px] md:text-xs'>Shop</div>
-                            <div className='pb-4 pt-3 text-[12px] md:text-sm'>All Product</div>
+                            <div className='pb-4 pt-3 text-[12px] md:text-sm'>
+                                <Link href='/components/ProductCard.tsx'>All Product</Link>
+                            </div>
                         </div>
                         <div className='bg-transparen flex scale-x-[-1] items-center pl-4 pr-4'>
                             <FiShoppingCart size={25} />
