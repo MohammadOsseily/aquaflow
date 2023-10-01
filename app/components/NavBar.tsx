@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 function NavBar() {
     return (
-        <div className='navbar bg-base-100'>
+        <div className='bg-red navbar '>
             <div className='navbar-start md:w-full'>
                 <div className='dropdown md:hidden'>
                     <label tabIndex={0} className='btn btn-circle btn-ghost'>
@@ -26,29 +26,31 @@ function NavBar() {
                         tabIndex={0}
                         className='menu dropdown-content rounded-box menu-sm z-[1] mt-3 w-52 bg-base-100 p-2 shadow'>
                         <li>
-                            <Link href='/ProductCard.tsx'>Product</Link>
+                            <Link href='/products'>Product</Link>
                         </li>
                         <li>
-                            <a>About</a>
+                            <Link href={'/about'}>About</Link>
                         </li>
                         <li>
-                            <a>Contact Us</a>
+                            <Link href={'/contactUs'}>Contact Us</Link>
                         </li>
                     </ul>
                 </div>
                 <a className=''>
-                    <Image src={'/static/images/logo.png'} width={70} height={70} alt='logo' />
+                    <Link href={'/'}>
+                        <Image src={'/static/images/logo.png'} width={70} height={70} alt='logo' />
+                    </Link>
                 </a>
                 <div className='hidden md:flex md:w-full md:justify-center md:gap-10'>
                     <div>
                         <Link href='/products'>Product</Link>
                     </div>
-                    <div>About</div>
-                    <div>Contact Us</div>
+                    <Link href={'/about'}>About</Link>
+                    <Link href={'/contactUs'}>Contact Us</Link>
                 </div>
             </div>
 
-            <div className='navbar-end md:w-fit'>
+            <div className='navbar-end md:w-2/5'>
                 <button className='btn btn-circle btn-ghost'>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
@@ -95,6 +97,14 @@ function NavBar() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className='w-35 flex h-16 flex-row items-center justify-around rounded-full bg-white pl-4 text-sm md:h-20 md:w-44 md:text-base'>
+                    <div className=''>
+                        <Link href={'/auth/login'}>Login</Link>
+                    </div>
+                    <div className=' ml-1 flex h-10 w-16 items-center justify-center rounded-full bg-secondary text-sm text-white md:ml-0 md:h-14 md:w-20  md:text-base'>
+                        <Link href={'/auth/register'}>Sign Up</Link>
                     </div>
                 </div>
             </div>

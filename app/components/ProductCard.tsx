@@ -45,7 +45,7 @@ type props = {
 
 function ProductCard({ product }: props) {
     return (
-        <div className='card glass flex w-[47%]  items-center pt-4 md:w-[24%]'>
+        <div className='neumorphism card glass flex w-[47%]  items-center bg-primary pt-4 md:w-[24%]'>
             <figure>
                 <Image alt={product.productName} width={50} height={50} src={'/static/images/' + product.image} />
             </figure>

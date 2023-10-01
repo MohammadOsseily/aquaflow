@@ -1,20 +1,21 @@
 function ContactUs() {
     return (
         <div>
-            <div>
-                <div>Contact Us</div>
+            <hr />
+            <div className='pt-10 '>
+                <div className='pb-10 text-4xl '>Contact Us</div>
 
-                <div>Our store phone number:</div>
+                <div className='  pb-5 text-lg text-secondary'>Our store phone number:</div>
 
-                <div>+961 81738558 </div>
+                <div className='pb-5 text-gray-500'>+961 81738558 </div>
 
-                <div>Email:</div>
+                <div className='pb-5 text-lg text-secondary'>Email:</div>
 
-                <div>mohammad.osseily2@gmail.com</div>
+                <div className='pb-5 text-gray-500'>mohammad.osseily2@gmail.com</div>
 
-                <div>Our Store Address:</div>
+                <div className='pb-5 text-lg text-secondary'>Our Store Address:</div>
 
-                <div>Beirut, Lebanon</div>
+                <div className='text-gray-500'>Beirut, Lebanon</div>
             </div>
         </div>
     );
