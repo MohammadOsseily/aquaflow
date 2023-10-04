@@ -3,9 +3,9 @@ function About() {
         <div>
             <hr />
             <div className='pt-10 '>
-                <div className='pb-5 text-2xl md:text-4xl'>About Us </div>
+                <div className=' pb-5 text-2xl md:text-4xl'>About Us </div>
 
-                <div className='text-sm leading-6 md:text-lg md:leading-8'>
+                <div className='text-sm leading-6 text-gray-500 md:text-lg md:leading-8'>
                     Aqua Flow is your premier destination for high-quality sports products designed to elevate your
                     athletic performance and outdoor adventures. With a passion for sports and an unwavering commitment
                     to excellence, we have been a trusted name in the sports industry for years. Our mission is to
