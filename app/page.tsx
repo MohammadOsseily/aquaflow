@@ -26,11 +26,13 @@ export default function Home() {
                         <div className='   border-r-2 border-gray-300 bg-transparent pl-4 pr-4 pt-3'>
                             <div className=' text-[10px] md:text-xs'>Shop</div>
                             <div className='pb-4 pt-3 text-[12px] md:text-sm'>
-                                <Link href='/components/ProductCard.tsx'>All Product</Link>
+                                <Link href='/products'>All Product</Link>
                             </div>
                         </div>
                         <div className='bg-transparen flex scale-x-[-1] items-center pl-4 pr-4'>
-                            <FiShoppingCart size={25} />
+                            <Link href={'/cart'}>
+                                <FiShoppingCart size={25} />
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -57,7 +59,9 @@ export default function Home() {
                             Contact Us
                         </div>
                         <div className='absolute right-10 top-10'>
-                            <LuSend size={40} />
+                            <Link href={'/contactUs'}>
+                                <LuSend size={40} />
+                            </Link>
                         </div>
                     </div>
                 </div>
