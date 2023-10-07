@@ -3,7 +3,7 @@ import Link from 'next/link';
 function Chechkout() {
     return (
         <div className='mt-10 flex flex-row'>
-            <div className='flex w-1/2 flex-col'>
+            <div className='flex w-1/2  flex-col'>
                 <div className='pb-10'>
                     <div className='pb-10 text-3xl'>Customer</div>
                     <div>
@@ -103,11 +103,78 @@ function Chechkout() {
                             <input type='radio' name='radio-7' className='radio-info radio' />
                             <div className='pl-1'>LBP</div>
                         </div>
-                        <div className='flex w-full items-center pb-10 pl-1 pt-2'>
+                        <div className='flex w-full items-center pb-5 pl-1 pt-2'>
                             <input type='checkbox' id='horns' name='horns' />
                             <div className='ml-2 text-sm '>My billing address is the same as my shipping address.</div>
                         </div>
                     </div>
+                    <div>
+                        <div className='pb-2 text-sm'>Shipping Method</div>
+                        <div className='mb-10 flex h-40 flex-col rounded-xl border-2 bg-white'>
+                            <div className='mb-4 flex h-1/2 flex-row items-center'>
+                                <input
+                                    id='default-radio-1'
+                                    type='radio'
+                                    value=''
+                                    name='default-radio'
+                                    className='ml-4 h-6 w-6   '
+                                />
+                                <label
+                                    htmlFor='default-radio-1'
+                                    className='ml-4 text-lg font-medium text-gray-900 dark:text-gray-300'>
+                                    Pickup In Store
+                                </label>
+                            </div>
+                            <div className='mb-4 flex h-1/2 flex-row items-center border-t-2'>
+                                <input
+                                    id='default-radio-2'
+                                    type='radio'
+                                    value=''
+                                    name='default-radio'
+                                    className='ml-4 h-6 w-6 '
+                                />
+                                <label
+                                    htmlFor='default-radio-2'
+                                    className='ml-4 text-lg font-medium text-gray-900 dark:text-gray-300'>
+                                    Free Shipping
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>Additional Notes</div>
+                        <div className='pb-10'>
+                            <input
+                                className='mb-6 w-full  rounded-xl  border-[1px] border-secondary p-2 text-secondary outline-none focus:bg-neutral'
+                                type='text'
+                                name='AdditionalNotes'
+                            />
+                            <button className='hover:  w-1/3 rounded-full bg-secondary py-3 text-sm font-semibold uppercase text-white hover:bg-gray-500 '>
+                                Continue
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className='pb-10'>
+                    <div className='pb-4 text-3xl'>Paymnet</div>
+
+                    <div className='mb-3 flex h-20 flex-row items-center rounded-xl border-2 bg-white'>
+                        <input
+                            id='cashOnDelevery'
+                            type='radio'
+                            value=''
+                            name='cashOnDelevery'
+                            className='ml-4 h-6 w-6   '
+                        />
+                        <label
+                            htmlFor='cashOnDelevery'
+                            className='ml-4 text-lg font-medium text-gray-900 dark:text-gray-300'>
+                            Cash on Delivery
+                        </label>
+                    </div>
+                    <button className='  w-full rounded-xl bg-secondary py-4 text-sm font-semibold uppercase text-white hover:bg-gray-500 '>
+                        Place Order
+                    </button>
                 </div>
             </div>
             <div className='flex w-1/2 flex-col'>nothing...</div>
