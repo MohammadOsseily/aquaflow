@@ -1,53 +1,49 @@
 'use client';
 import { useState } from 'react';
+type props = {
+    items: {
+        id: number;
+        label: string;
+        slug: string;
+    }[];
+};
 
-function Paymnetinput() {
-    const [selected, setSeleceted] = useState(false);
+function PaymnetInput({ items }: props) {
+    const [selected, setSeleceted] = useState(0);
 
     return (
-        <div>
-            <div className='mx-4 flex w-full pb-4'>
-                <label htmlFor='default-radio-1' className='w-[44%] text-lg font-medium text-secondary '>
-                    <div
-                        className={`card rounded-box flex h-20   flex-wrap  content-center justify-center  ${
-                            selected ? 'bg-accent' : 'bg-primary'
-                        }`}>
-                        Pickup In store
-                        <div className={` mb-4 flex h-1/2 flex-row items-center`}>
-                            <input
-                                id='default-radio-1'
-                                type='radio'
-                                value=''
-                                name='default-radio'
-                                className={`ml-4 hidden h-6 w-6 `}
-                                onChange={() => setSeleceted(!selected)}
-                            />
+        <>
+            <div className='flex w-full px-3 pb-4'>
+                {items.map((item, index) => {
+                    return (
+                        <div
+                            key={item.id}
+                            className=' flex w-full cursor-pointer flex-row text-lg font-medium text-secondary'>
+                            <label
+                                htmlFor={`${item.label}-${item.id}`}
+                                className='w-full cursor-pointer text-lg font-medium text-secondary '>
+                                <div
+                                    className={`card rounded-box flex h-20 w-full   flex-wrap  content-center justify-center  ${
+                                        selected == item.id ? 'bg-accent' : 'bg-neutral'
+                                    }`}>
+                                    {item.label}
+                                    <div className={` mb-4 flex h-1/2 flex-row items-center`}>
+                                        <input
+                                            id={`${item.slug}-${item.id}`}
+                                            type='radio'
+                                            name='default-radio'
+                                            className='hidden'
+                                            onChange={(e) => (e.target.checked == true ? setSeleceted(item.id) : null)}
+                                        />
+                                    </div>
+                                </div>
+                            </label>
+                            {index == 0 ? <div className='divider divider-horizontal w-fit'></div> : null}
                         </div>
-                    </div>
-                </label>
-
-                <div className='divider divider-horizontal'></div>
-
-                <label htmlFor='default-radio-2' className='w-[44%] text-lg font-medium text-secondary '>
-                    <div
-                        className={`card rounded-box flex h-20   flex-wrap  content-center justify-center  ${
-                            !selected ? 'bg-accent' : 'bg-primary'
-                        }`}>
-                        Free Shipping
-                        <div className={` mb-4 flex h-1/2 flex-row items-center`}>
-                            <input
-                                id='default-radio-2'
-                                type='radio'
-                                value=''
-                                name='default-radio'
-                                className={`ml-4 hidden h-6 w-6 `}
-                                onChange={() => setSeleceted(!selected)}
-                            />
-                        </div>
-                    </div>
-                </label>
+                    );
+                })}
             </div>
-        </div>
+        </>
     );
 }
-export default Paymnetinput;
+export default PaymnetInput;

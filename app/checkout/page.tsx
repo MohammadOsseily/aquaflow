@@ -66,7 +66,12 @@ function Chechkout() {
                                 name='District'
                             />
                         </div>
-                        <Paymnetinput />
+                        <Paymnetinput
+                            items={[
+                                { id: 0, label: 'Pickup In Store', slug: 'Pickup In Store' },
+                                { id: 1, label: 'Free Delevery', slug: 'Free Delevery' },
+                            ]}
+                        />
                     </div>
 
                     <div className='neumorphism bg-white'>
