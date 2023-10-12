@@ -1,5 +1,5 @@
-'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 function login() {
     return (
         <div className='flex h-screen '>
@@ -42,12 +42,12 @@ function login() {
                     </div>
                 </form>
                 <div>
-                    <a className='float-left text-sm text-secondary hover:text-neutral' href='/auth/forgetPass'>
+                    <Link className='float-left text-sm text-secondary hover:text-neutral' href='/auth/forgetPass'>
                         Forgot Password?
-                    </a>
-                    <a className='float-right text-sm text-secondary hover:text-neutral' href='/auth/register'>
+                    </Link>
+                    <Link className='float-right text-sm text-secondary hover:text-neutral' href='/auth/register'>
                         Register
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

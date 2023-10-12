@@ -1,4 +1,3 @@
-'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -36,11 +35,11 @@ function NavBar() {
                         </li>
                     </ul>
                 </div>
-                <a className=''>
-                    <Link href={'/'}>
-                        <Image src={'/static/images/logo.png'} width={70} height={70} alt='logo' />
-                    </Link>
-                </a>
+
+                <Link href={'/'}>
+                    <Image src={'/static/images/logo.png'} width={70} height={70} alt='logo' />
+                </Link>
+
                 <div className='hidden md:flex md:w-full md:justify-center md:gap-10'>
                     <div>
                         <Link href='/products'>Product</Link>

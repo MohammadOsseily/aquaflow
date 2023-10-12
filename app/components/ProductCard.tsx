@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import { FiShoppingCart } from 'react-icons/fi';
 import 'react-icons';
@@ -7,6 +5,7 @@ import { Product } from '../../types/product';
 
 import { Pagination } from '../../types/pagination';
 import Link from 'next/link';
+import { SetStateAction } from 'react';
 
 type paginationProps = {
     pagination: Pagination;
@@ -41,11 +40,12 @@ export function Pagination({ pagination }: paginationProps) {
 }
 type props = {
     product: Product;
+    setSelectedProduct: React.Dispatch<SetStateAction<Product | undefined>>;
 };
 
-function ProductCard({ product }: props) {
+function ProductCard({ product, setSelectedProduct }: props) {
     return (
-        <div className='neumorphism card glass flex w-[47%]  items-center bg-primary pt-4 md:w-[24%]'>
+        <div onClick={() => setSelectedProduct(product)}>
             <figure>
                 <Image alt={product.productName} width={50} height={50} src={'/static/images/' + product.image} />
             </figure>

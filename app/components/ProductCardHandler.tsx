@@ -1,6 +1,8 @@
 'use client';
 import { useState } from 'react';
 import Productcard, { Pagination } from '../components/ProductCard';
+import ProductModuel from './ProductModuel';
+import { Product } from '../../types/product';
 
 const pagination = {
     total: 23,
@@ -18,7 +20,7 @@ const pagination = {
         { price: 45, productName: 'black bottle', image: 'black-bottle.png' },
         { price: 90, productName: 'blac bottle', image: 'black-bottle.png' },
         { price: 80, productName: 'bl bottle', image: 'black-bottle.png' },
-        { price: 22, productName: ' bottle', image: 'black-bottle.png' },
+        { price: 22, productName: 'bottle', image: 'black-bottle.png' },
         { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
         { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
         { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
@@ -41,16 +43,27 @@ const pagination = {
         { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
     ],
 };
-const [open, setOpen] = useState();
-function ProductCardHandler() {
-    <div>
-        <div className='mx-auto  flex flex-row flex-wrap gap-4 py-5 '>
-            {pagination.data.map((product, index) => {
-                return <Productcard product={product} key={index} />;
-            })}
-        </div>
 
-        <Pagination pagination={pagination} />
-    </div>;
+function ProductCardHandler() {
+    const [selectedProduct, setSelectedProduct] = useState<Product | undefined>(undefined);
+
+    return (
+        <div>
+            <div className='mx-auto  flex flex-row flex-wrap gap-4 py-5 '>
+                {pagination.data.map((product, index) => {
+                    return (
+                        <div
+                            className='neumorphism card glass flex w-[47%]  items-center bg-primary pt-4 md:w-[24%]'
+                            key={index}>
+                            <Productcard product={product} setSelectedProduct={setSelectedProduct} key={index} />
+                        </div>
+                    );
+                })}
+                {selectedProduct != undefined && <ProductModuel products={selectedProduct} />}
+            </div>
+
+            <Pagination pagination={pagination} />
+        </div>
+    );
 }
 export default ProductCardHandler;

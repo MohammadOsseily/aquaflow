@@ -1,8 +1,6 @@
-
+import ProductCardHandler from '../components/ProductCardHandler';
 
 function Page() {
-    return (
-        
-    );
+    return <ProductCardHandler />;
 }
 export default Page;

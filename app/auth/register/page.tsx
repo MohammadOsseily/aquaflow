@@ -1,5 +1,5 @@
-'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function register() {
     return (
@@ -53,12 +53,12 @@ function register() {
                     </div>
                 </form>
                 <div>
-                    <a className='float-left text-sm text-secondary hover:text-neutral' href='/auth/forgetPass'>
+                    <Link className='float-left text-sm text-secondary hover:text-neutral' href='/auth/forgetPass'>
                         Forgot Password?
-                    </a>
-                    <a className='float-right text-sm text-secondary hover:text-neutral' href='/auth/login'>
+                    </Link>
+                    <Link className='float-right text-sm text-secondary hover:text-neutral' href='/auth/login'>
                         Login
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
