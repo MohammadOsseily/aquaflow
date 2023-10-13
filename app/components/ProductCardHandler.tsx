@@ -17,30 +17,168 @@ const pagination = {
     from: 1,
     to: 5,
     data: [
-        { price: 45, productName: 'black bottle', image: 'black-bottle.png' },
-        { price: 90, productName: 'blac bottle', image: 'black-bottle.png' },
-        { price: 80, productName: 'bl bottle', image: 'black-bottle.png' },
-        { price: 22, productName: 'bottle', image: 'black-bottle.png' },
-        { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
-        { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
-        { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
-        { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
+        {
+            price: 45,
+            productName: 'black bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 90,
+            productName: 'blac bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 80,
+            productName: 'bl bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 22,
+            productName: 'bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 12,
+            productName: 'bla bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 12,
+            productName: 'bla bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 12,
+            productName: 'bla bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 12,
+            productName: 'bla bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
 
-        { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
-        { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
-        { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
-        { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
-        { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
-        { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
-        { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
-        { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
-        { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
-        { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
-        { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
-        { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
-        { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
-        { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
-        { price: 12, productName: 'bla bottle', image: 'black-bottle.png' },
+        {
+            price: 12,
+            productName: 'bla bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 12,
+            productName: 'bla bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 12,
+            productName: 'bla bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 12,
+            productName: 'bla bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 12,
+            productName: 'bla bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 12,
+            productName: 'bla bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 12,
+            productName: 'bla bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 12,
+            productName: 'bla bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 12,
+            productName: 'bla bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 12,
+            productName: 'bla bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 12,
+            productName: 'bla bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 12,
+            productName: 'bla bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 12,
+            productName: 'bla bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 12,
+            productName: 'bla bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
+        {
+            price: 12,
+            productName: 'bla bottle',
+            image: 'black-bottle.png',
+            description:
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        },
     ],
 };
 
