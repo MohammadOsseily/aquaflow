@@ -187,16 +187,17 @@ function ProductCardHandler() {
 
     return (
         <div>
-            <div className='mx-auto  flex flex-row flex-wrap gap-4 py-5 '>
+            <div className='mx-auto flex flex-row flex-wrap gap-4 py-5 '>
                 {pagination.data.map((product, index) => {
                     return (
                         <div
-                            className='neumorphism card glass flex w-[47%]  items-center bg-primary pt-4 md:w-[24%]'
+                            className='neumorphism card glass  flex w-[47%] items-center bg-primary pt-4 md:w-[24%]'
                             key={index}>
                             <Productcard product={product} setSelectedProduct={setSelectedProduct} key={index} />
                         </div>
                     );
                 })}
+
                 {selectedProduct != undefined && <ProductModuel products={selectedProduct} />}
             </div>
 
