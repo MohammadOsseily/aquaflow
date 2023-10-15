@@ -54,9 +54,12 @@ function ProductCard({ product, setSelectedProduct }: props) {
 
                 <div className='card-actions flex  items-center'>
                     <p className='font-bold'>{product.price}$</p>
-                    <button className='btn btn-primary bg-secondary hover:bg-secondary'>
+                    <Link
+                        onClick={(e) => e.stopPropagation()}
+                        href={'/checkout'}
+                        className='btn btn-primary bg-secondary hover:bg-secondary'>
                         <FiShoppingCart size={25} className='bg-secondary text-white' />
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

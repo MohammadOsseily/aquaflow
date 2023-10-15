@@ -22,7 +22,7 @@ const pagination = {
             productName: 'black bottle',
             image: 'black-bottle.png',
             description:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ",
         },
         {
             price: 90,
@@ -186,23 +186,25 @@ function ProductCardHandler() {
     const [selectedProduct, setSelectedProduct] = useState<Product | undefined>(undefined);
 
     return (
-        <div>
-            <div className='mx-auto flex flex-row flex-wrap gap-4 py-5 '>
+        <>
+            <div className='mx-2 grid grid-cols-2 gap-4 py-5  md:mx-auto  md:grid-cols-4 '>
                 {pagination.data.map((product, index) => {
                     return (
-                        <div
-                            className='neumorphism card glass  flex w-[47%] items-center bg-primary pt-4 md:w-[24%]'
-                            key={index}>
+                        <div className='neumorphism card glass  flex  items-center bg-primary pt-4 ' key={index}>
                             <Productcard product={product} setSelectedProduct={setSelectedProduct} key={index} />
                         </div>
                     );
                 })}
 
-                {selectedProduct != undefined && <ProductModuel products={selectedProduct} />}
+                {selectedProduct != undefined && (
+                    <div className='fixed inset-0 z-20 flex h-full w-full items-center justify-center overflow-hidden overflow-y-scroll overscroll-contain  bg-black/50  backdrop-blur-sm'>
+                        <ProductModuel products={selectedProduct} />
+                    </div>
+                )}
             </div>
 
             <Pagination pagination={pagination} />
-        </div>
+        </>
     );
 }
 export default ProductCardHandler;

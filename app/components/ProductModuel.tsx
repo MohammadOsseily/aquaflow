@@ -7,7 +7,7 @@ type props = {
 
 function ProductModuel({ products }: props) {
     return (
-        <div className=' modal-box fixed flex   h-2/3 w-full max-w-5xl items-center bg-neutral md:ml-[4%] md:w-1/2'>
+        <div className=' modal-box  flex   h-2/3 w-full max-w-5xl items-center bg-neutral md:w-1/2'>
             <div className='flex h-full flex-col md:flex-row '>
                 <div className='flex w-full flex-row items-center justify-center md:w-1/2 md:flex-col'>
                     <Image
