@@ -1,7 +1,12 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
+import 'react-icons';
+import { CgProfile } from 'react-icons/cg';
 
 function NavBar() {
+    const [isLoged, setIsLoged] = useState(true);
     return (
         <div className='bg-red navbar '>
             <div className='navbar-start md:w-full'>
@@ -101,14 +106,23 @@ function NavBar() {
                         </div>
                     </div>
                 </div>
-                <div className='w-35 flex h-16 flex-row items-center justify-around rounded-full bg-white pl-4 text-sm md:h-20 md:w-44 md:text-base'>
-                    <div className=''>
-                        <Link href={'/auth/login'}>Login</Link>
+                {!isLoged && (
+                    <div className='w-35 flex h-16 flex-row items-center justify-around rounded-full bg-white pl-4 text-sm md:h-20 md:w-44 md:text-base'>
+                        <div className=''>
+                            <Link href={'/auth/login'}>Login</Link>
+                        </div>
+                        <div className=' ml-1 flex h-10 w-16 items-center justify-center rounded-full bg-secondary text-sm text-white md:ml-0 md:h-14 md:w-20  md:text-base'>
+                            <Link href={'/auth/register'}>Sign Up</Link>
+                        </div>
                     </div>
-                    <div className=' ml-1 flex h-10 w-16 items-center justify-center rounded-full bg-secondary text-sm text-white md:ml-0 md:h-14 md:w-20  md:text-base'>
-                        <Link href={'/auth/register'}>Sign Up</Link>
+                )}
+                {isLoged && (
+                    <div>
+                        <Link href='/account' className='ml-3 flex text-2xl text-secondary md:text-3xl'>
+                            <CgProfile />
+                        </Link>
                     </div>
-                </div>
+                )}
             </div>
         </div>
     );

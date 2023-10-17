@@ -197,7 +197,7 @@ function ProductCardHandler() {
                 })}
 
                 {selectedProduct != undefined && (
-                    <div className='fixed inset-0 z-20 flex h-full w-full items-center justify-center overflow-hidden overflow-y-scroll overscroll-contain  bg-black/50  backdrop-blur-sm'>
+                    <div className='fixed inset-0 z-20 flex h-full w-full items-center justify-center   bg-black/50  backdrop-blur-sm'>
                         <ProductModuel products={selectedProduct} />
                     </div>
                 )}

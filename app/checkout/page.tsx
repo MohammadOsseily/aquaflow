@@ -1,3 +1,4 @@
+import GlobalTextField from '../components/GlobalTextField';
 import Paymnetinput from './PaymentInput';
 
 function Chechkout() {
@@ -9,58 +10,61 @@ function Chechkout() {
                         <div className='mx-4 pb-5 pt-4 text-3xl'>Shipping</div>
 
                         <div className='mx-4'>
-                            <input
-                                className='mb-6 w-full rounded-xl border-[1px]  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
-                                placeholder='Email'
-                                type='email'
-                                name='Email'
+                            <GlobalTextField
+                                globalTextField={{
+                                    inputAutoComplete: 'email',
+                                    inputName: 'email',
+                                    inputPlaceholder: 'Email',
+                                    inputType: 'email',
+                                }}
                             />
+
                             <input
-                                className='mb-6 w-full rounded-xl border-[1px]  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
+                                className='mb-6 w-full rounded-xl border  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
                                 placeholder='Full Name'
                                 type='text'
-                                name='Full Name'
+                                name='fName'
                             />
 
                             <input
-                                className='mb-6 w-full  rounded-xl border-[1px]  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
+                                className='mb-6 w-full  rounded-xl border  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
                                 placeholder='Phone Number'
                                 type='number'
-                                name='Phone Number'
+                                name='phone'
                             />
                             <input
-                                className='mb-6 w-full  rounded-xl  border-[1px] border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
+                                className='mb-6 w-full  rounded-xl  border border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
                                 placeholder='Country'
                                 type='text'
-                                name='Country'
+                                name='country'
                             />
                             <input
-                                className='mb-6 w-[49%]  rounded-xl border-[1px]  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
+                                className='mb-6 w-[49%]  rounded-xl border  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
                                 placeholder='State/Province'
                                 type='text'
-                                name='State/Province'
+                                name='state'
                             />
                             <input
-                                className='mb-6 ml-1 w-1/2 rounded-xl border-[1px]  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
+                                className='mb-6 ml-1 w-1/2 rounded-xl border  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
                                 placeholder='City'
                                 type='text'
-                                name='City'
+                                name='city'
                             />
 
                             <input
-                                className='mb-6 w-full rounded-xl  border-[1px]  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
+                                className='mb-6 w-full rounded-xl  border  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
                                 placeholder='Apartment/Suite/Building'
                                 type='text'
-                                name='Apartment/Suite/Building'
+                                name='apartment'
                             />
                             <input
-                                className='mb-6 w-full rounded-xl  border-[1px]  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
+                                className='mb-6 w-full rounded-xl  border  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
                                 placeholder='Floor'
                                 type='text'
-                                name='Floor'
+                                name='floor'
                             />
                             <input
-                                className='mb-6 w-full rounded-xl  border-[1px]  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
+                                className='mb-6 w-full rounded-xl  border  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
                                 placeholder='District (المنطقة)'
                                 type='text'
                                 name='District'
@@ -81,7 +85,7 @@ function Chechkout() {
                             <div className='mx-4 pb-2'>Additional Notes</div>
                             <div className='mx-4 pb-10'>
                                 <input
-                                    className='mb-6 w-full  rounded-xl border-[1px] border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
+                                    className='mb-6 w-full  rounded-xl border border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
                                     type='text'
                                     name='AdditionalNotes'
                                 />
