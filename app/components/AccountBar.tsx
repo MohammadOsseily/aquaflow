@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 function AccountBar() {
     return (
-        <div className='neumorphism flex h-1/2 flex-col justify-evenly bg-neutral '>
+        <div className='neumorphism flex h-60 w-3/4 flex-col justify-evenly bg-primary'>
             <div className='ml-5 text-lg hover:text-gray-600'>
                 <Link href={'/account'}>Account Details</Link>
             </div>

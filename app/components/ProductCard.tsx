@@ -14,24 +14,34 @@ export function Pagination({ pagination }: paginationProps) {
     return (
         <div className='join flex w-full justify-center'>
             {pagination.current_page != 1 && (
-                <Link href={pagination.first_page_url} className='btn join-item'>
+                <Link
+                    href={pagination.first_page_url}
+                    className='btn join-item bg-primary hover:bg-secondary hover:text-primary'>
                     1
                 </Link>
             )}
 
             {pagination.prev_page_url && (
-                <Link href={pagination.prev_page_url} className='btn join-item'>
+                <Link
+                    href={pagination.prev_page_url}
+                    className='btn join-item bg-primary  hover:bg-secondary hover:text-primary'>
                     {pagination.current_page - 1}
                 </Link>
             )}
-            <div className='btn join-item btn-active'>{pagination.current_page}</div>
+            <div className='btn join-item  bg-primary hover:bg-secondary hover:text-primary'>
+                {pagination.current_page}
+            </div>
             {pagination.next_page_url && (
-                <Link href={pagination.next_page_url} className='btn join-item'>
+                <Link
+                    href={pagination.next_page_url}
+                    className='btn join-item bg-primary hover:bg-secondary hover:text-primary'>
                     {pagination.current_page + 1}
                 </Link>
             )}
             {pagination.last_page_url && pagination.current_page != pagination.last_page && (
-                <Link href={pagination.last_page_url} className='btn join-item'>
+                <Link
+                    href={pagination.last_page_url}
+                    className='btn join-item bg-primary hover:bg-secondary hover:text-primary'>
                     {pagination.last_page}
                 </Link>
             )}

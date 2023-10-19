@@ -1,3 +1,4 @@
+import { OrderHistory } from './ordersHistory';
 import { Product } from './product';
 
 export type Pagination = {
@@ -12,5 +13,6 @@ export type Pagination = {
     path: string;
     from: number;
     to: number;
-    data: Product[];
+    data?: Product[];
+    orderData?: OrderHistory[];
 };
