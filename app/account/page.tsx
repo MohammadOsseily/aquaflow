@@ -4,7 +4,7 @@ import GlobalTextField from '../components/GlobalTextField';
 function Account() {
     return (
         <div className=''>
-            <div className='pt-7 text-4xl'>Profile</div>
+            <div className='ml-2 pt-7 text-4xl md:ml-0'>Profile</div>
             <div className='grid grid-cols-2 gap-4 pt-5'>
                 <AccountBar />
                 <div className=''>

@@ -41,16 +41,26 @@ const pagination = {
 function Orders() {
     return (
         <div className=''>
-            <div className='pb-7 pt-7 text-4xl'>Order History</div>
+            <div className='mx-auto w-[95%] pb-7 pt-7 text-4xl md:w-full'>Order History</div>
 
-            <div className='grid-rows neumorphism grid bg-primary '>
+            <div className='grid-rows neumorphism mx-auto grid w-[95%] bg-primary md:w-full'>
                 <div className='mb-5 ml-2 mt-10 flex'>
-                    <div className='w-1/5 text-xs font-semibold uppercase text-gray-600'>Order ID</div>
-                    <div className='t w-1/5 text-center text-xs font-semibold uppercase text-gray-600'>Payment</div>
-                    <div className='t w-1/5 text-center text-xs font-semibold uppercase text-gray-600'>Date</div>
-                    <div className='w-1/5  text-center text-xs font-semibold uppercase text-gray-600'>Status</div>
-                    <div className='w-[10%]  text-center text-xs font-semibold uppercase text-gray-600'>Total</div>
-                    <div className='w-[10%]  text-center text-xs font-semibold uppercase text-gray-600'>Action</div>
+                    <div className='w-1/5 text-[10px] font-semibold uppercase text-gray-600 md:text-xs'>Order ID</div>
+                    <div className='t w-1/5 text-center text-[10px] font-semibold uppercase text-gray-600 md:text-xs'>
+                        Payment
+                    </div>
+                    <div className='t w-1/5 text-center text-[10px] font-semibold uppercase text-gray-600 md:text-xs'>
+                        Date
+                    </div>
+                    <div className='w-1/5  text-center text-[10px] font-semibold uppercase text-gray-600 md:text-xs'>
+                        Status
+                    </div>
+                    <div className='w-1/5 text-center text-[10px] font-semibold uppercase text-gray-600 md:w-[10%] md:text-xs'>
+                        Total
+                    </div>
+                    <div className='w-1/5 text-center  text-[10px] font-semibold uppercase text-gray-600 md:w-[10%] md:text-xs'>
+                        Action
+                    </div>
                 </div>
                 {pagination.orderHistory.map((product, index) => {
                     return <OrderHistory orderHistory={product} key={index} />;
