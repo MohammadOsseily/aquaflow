@@ -16,8 +16,8 @@ const CartList = {
 
 function Cart() {
     return (
-        <div className='bg-gray-100'>
-            <div className='container mx-auto mt-10'>
+        <div className='bg-gray-100 '>
+            <div className=' container mx-auto mt-10'>
                 <div className='my-10 flex flex-col shadow-md md:flex-row'>
                     <div className='w-full bg-white px-10 py-10 md:w-3/4'>
                         <div className='flex justify-between border-b pb-8'>
@@ -48,31 +48,7 @@ function Cart() {
 
                     <div id='summary' className='w-full px-8 py-10 md:w-1/4'>
                         <h1 className='border-b pb-8 text-2xl font-semibold'>Order Summary</h1>
-                        <div className='mb-5 mt-10 flex justify-between'>
-                            <span className='text-sm font-semibold uppercase'>Items 3</span>
-                            <span className='text-sm font-semibold'>590$</span>
-                        </div>
-                        <div>
-                            <label className='mb-3 inline-block text-sm font-medium uppercase'>Shipping</label>
-                            <select className='block w-full p-2 text-sm text-gray-600'>
-                                <option>Standard shipping - $10.00</option>
-                            </select>
-                        </div>
-                        <div className='py-10'>
-                            <label htmlFor='promo' className='mb-3 inline-block text-sm font-semibold uppercase'>
-                                Promo Code
-                            </label>
-                            <input
-                                type='text'
-                                id='promo'
-                                placeholder='Enter your code'
-                                className='w-full p-2 text-sm'
-                            />
-                        </div>
-                        <button className='rounded-full bg-secondary px-5 py-2 text-sm uppercase text-white hover:bg-gray-500'>
-                            Apply
-                        </button>
-                        <div className='mt-8 border-t'>
+                        <div className='mt-8 '>
                             <div className='flex justify-between py-6 text-sm font-semibold uppercase'>
                                 <span>Total cost</span>
                                 <span>$600</span>
