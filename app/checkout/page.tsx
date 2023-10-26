@@ -28,56 +28,65 @@ function Chechkout() {
                             value={value}
                             onChange={(newValue) => setValue(newValue)}
                             containerClass={
-                                'mb-6 w-full rounded-xl border  border-secondary bg-white p-2 text-secondary outline-none focus:bg-primary'
+                                'mb-6 w-full flex items-center rounded-xl border h-11 border-secondary bg-white p-2 text-secondary outline-none focus:bg-primary'
                             }
                             inputClass={'bg-black'}
                             inputStyle={{ backgroundColor: 'transparent', border: '0px', width: '100%' }}
                             buttonStyle={{ border: '0px', backgroundColor: 'transparent' }}
                         />
 
-                        <input
-                            className='mb-6 w-full rounded-xl border  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
-                            placeholder='Full Name'
-                            type='text'
-                            name='fName'
+                        <GlobalTextField
+                            globalTextField={{
+                                inputAutoComplete: 'fName',
+                                inputName: 'fName',
+                                inputPlaceholder: 'Full Name',
+                                inputType: 'text',
+                            }}
                         />
 
-                        <input
-                            className='mb-6 w-full  rounded-xl border  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
-                            placeholder='Phone Number'
-                            type='number'
-                            name='phone'
-                        />
-                        <input
-                            className='mb-6 w-full  rounded-xl  border border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
-                            placeholder='Country'
-                            type='text'
-                            name='country'
-                        />
-                        <input
-                            className='mb-6 w-[49%]  rounded-xl border  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
-                            placeholder='State/Province'
-                            type='text'
-                            name='state'
-                        />
-                        <input
-                            className='mb-6 ml-1 w-1/2 rounded-xl border  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
-                            placeholder='City'
-                            type='text'
-                            name='city'
+                        <GlobalTextField
+                            globalTextField={{
+                                inputAutoComplete: 'country',
+                                inputName: 'country',
+                                inputPlaceholder: 'Country',
+                                inputType: 'text',
+                            }}
                         />
 
-                        <input
-                            className='mb-6 w-full rounded-xl  border  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
-                            placeholder='Apartment/Suite/Building'
-                            type='text'
-                            name='apartment'
+                        <GlobalTextField
+                            globalTextField={{
+                                inputAutoComplete: 'state',
+                                inputName: 'state',
+                                inputPlaceholder: 'State/Province',
+                                inputType: 'text',
+                            }}
                         />
-                        <input
-                            className='mb-6 w-full rounded-xl  border  border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
-                            placeholder='Floor'
-                            type='text'
-                            name='floor'
+
+                        <GlobalTextField
+                            globalTextField={{
+                                inputAutoComplete: 'city',
+                                inputName: 'city',
+                                inputPlaceholder: 'City',
+                                inputType: 'text',
+                            }}
+                        />
+
+                        <GlobalTextField
+                            globalTextField={{
+                                inputAutoComplete: 'apartment',
+                                inputName: 'apartment',
+                                inputPlaceholder: 'Apartment/Suite/Building',
+                                inputType: 'text',
+                            }}
+                        />
+
+                        <GlobalTextField
+                            globalTextField={{
+                                inputAutoComplete: 'Floor',
+                                inputName: 'Floor',
+                                inputPlaceholder: 'Floor',
+                                inputType: 'text',
+                            }}
                         />
                     </div>
                 </div>
@@ -86,11 +95,11 @@ function Chechkout() {
                     <div className='mx-4 pb-5 pt-4 text-3xl'>Complete</div>
 
                     <div>
-                        <div className='mx-4 pb-2'>Additional Notes</div>
                         <div className='mx-4 pb-10'>
                             <input
-                                className='mb-6 w-full  rounded-xl border border-secondary bg-primary p-2 text-secondary outline-none focus:bg-neutral'
+                                className='mb-6 w-full  rounded-xl border border-secondary bg-white p-2 text-secondary outline-none focus:bg-primary'
                                 type='text'
+                                placeholder='Additional Notes'
                                 name='AdditionalNotes'
                             />
                             <div className='flex justify-center'>
