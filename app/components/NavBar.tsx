@@ -8,7 +8,7 @@ import { CgProfile } from 'react-icons/cg';
 function NavBar() {
     const [isLoged, setIsLoged] = useState(true);
     return (
-        <div className='bg-red navbar '>
+        <div className='bg-red navbar'>
             <div className='navbar-start md:w-full'>
                 <div className='dropdown md:hidden'>
                     <label tabIndex={0} className='btn btn-circle btn-ghost'>
@@ -46,9 +46,7 @@ function NavBar() {
                 </Link>
 
                 <div className='hidden md:flex md:w-full md:justify-center md:gap-10'>
-                    <div>
-                        <Link href='/products'>Product</Link>
-                    </div>
+                    <Link href='/products'>Product</Link>
                     <Link href={'/about'}>About</Link>
                     <Link href={'/contactUs'}>Contact Us</Link>
                 </div>

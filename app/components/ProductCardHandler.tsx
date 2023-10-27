@@ -187,7 +187,7 @@ function ProductCardHandler() {
 
     return (
         <>
-            <div className='mx-2 grid grid-cols-2 gap-4 py-5  md:mx-auto  md:grid-cols-4 '>
+            <div className='grid grid-cols-2 gap-4 py-5  md:mx-auto  md:grid-cols-4 '>
                 {pagination.data.map((product, index) => {
                     return (
                         <div className='neumorphism card glass  flex  items-center bg-primary pt-4 ' key={index}>

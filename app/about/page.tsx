@@ -1,6 +1,6 @@
 function About() {
     return (
-        <div>
+        <>
             <hr />
             <div className='pt-10 '>
                 <div className=' pb-5 text-2xl md:text-4xl'>About Us </div>
@@ -24,7 +24,7 @@ function About() {
                     for all things sports-related. Together, lets achieve new heights and conquer new challenges.
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 export default About;
