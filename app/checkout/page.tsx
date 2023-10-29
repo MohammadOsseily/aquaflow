@@ -1,13 +1,7 @@
-'use client';
-import { useState } from 'react';
 import GlobalTextField from '../components/GlobalTextField';
-import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css';
-
-import 'react-phone-input-2/lib/style.css';
+import InternationalPhoneNumber from '../components/InternationalPhoneNumber';
 
 function Chechkout() {
-    const [value, setValue] = useState('');
     return (
         <div className='mt-10 flex flex-row'>
             <div className=' mx-auto flex w-[95%] flex-col  md:grid md:w-full md:grid-cols-2 md:gap-4'>
@@ -23,17 +17,7 @@ function Chechkout() {
                                 inputType: 'email',
                             }}
                         />
-                        <PhoneInput
-                            placeholder='Enter phone number'
-                            value={value}
-                            onChange={(newValue) => setValue(newValue)}
-                            containerClass={
-                                'mb-6 w-full flex items-center rounded-xl border h-11 border-secondary bg-white p-2 text-secondary outline-none focus:bg-primary'
-                            }
-                            inputClass={'bg-black'}
-                            inputStyle={{ backgroundColor: 'transparent', border: '0px', width: '100%' }}
-                            buttonStyle={{ border: '0px', backgroundColor: 'transparent' }}
-                        />
+                        <InternationalPhoneNumber />
 
                         <GlobalTextField
                             globalTextField={{

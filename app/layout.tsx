@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import NavBar from './components/NavBar';
 import '../public/static/css/global.css';
 import { Roboto } from 'next/font/google';
+import Footer from './components/Footer';
 
 export const metadata = {
     title: 'Aqua Flow',
@@ -19,6 +20,9 @@ export default function RootLayout({ children }: { children: ReactNode[] }) {
                 <NavBar />
                 {children}
             </body>
+            <footer className={`${roboto.className}  mx-auto w-full md:w-3/4`}>
+                <Footer />
+            </footer>
         </html>
     );
 }

@@ -1,22 +1,11 @@
-import Link from 'next/link';
-// import AccountBar from '../components/AccountBar';
+import AccountBar from '../components/AccountBar';
 import GlobalTextField from '../components/GlobalTextField';
 
 function Account() {
     return (
         <div className=''>
             <div className='mx-auto w-4/5 pb-7 pt-7 text-4xl '>Profile</div>
-            <div className='neumorphism mx-auto mb-7 flex h-28 w-4/5 items-center justify-between bg-primary'>
-                <div className='flex w-1/3 justify-center pl-4 text-sm hover:text-gray-600 md:text-xl'>
-                    <Link href={'/account'}>Account Details</Link>
-                </div>
-                <div className='flex h-full w-1/3 items-center justify-center border-l-2 border-r-2 text-sm hover:text-gray-600 md:text-xl'>
-                    <Link href={'/account/orders'}>Orders History</Link>
-                </div>
-                <div className='flex w-1/3 justify-center pr-4 text-sm hover:text-gray-600 md:text-xl'>
-                    <Link href={'/account/addresses'}>Addresses</Link>
-                </div>
-            </div>
+            <AccountBar />
             <div className='mx-auto w-4/5 pt-5'>
                 <div className=''>
                     <GlobalTextField

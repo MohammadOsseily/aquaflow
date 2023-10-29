@@ -46,9 +46,15 @@ function NavBar() {
                 </Link>
 
                 <div className='hidden md:flex md:w-full md:justify-center md:gap-10'>
-                    <Link href='/products'>Product</Link>
-                    <Link href={'/about'}>About</Link>
-                    <Link href={'/contactUs'}>Contact Us</Link>
+                    <Link className='btn-ghost rounded-xl p-2 transition duration-300 ease-in-out' href='/products'>
+                        Product
+                    </Link>
+                    <Link className='btn-ghost rounded-xl p-2 transition duration-300 ease-in-out' href={'/about'}>
+                        About
+                    </Link>
+                    <Link className='btn-ghost rounded-xl p-2 transition duration-300 ease-in-out' href={'/contactUs'}>
+                        Contact Us
+                    </Link>
                 </div>
             </div>
 
