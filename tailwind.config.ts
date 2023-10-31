@@ -20,6 +20,8 @@ const config: Config = {
                     success: '#36d399',
                     warning: '#fbbd23',
                     error: '#f87272',
+                    'base-200': '#D83776',
+                    'base-300': '#3B5998',
                 },
             },
         ],

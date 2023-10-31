@@ -16,7 +16,7 @@ const CartList = {
 
 function Cart() {
     return (
-        <div className='bg-gray-100 '>
+        <div className='bg-gray-100'>
             <div className=' container mx-auto mt-10'>
                 <div className='my-10 flex flex-col shadow-md md:flex-row'>
                     <div className='w-full bg-white px-10 py-10 md:w-3/4'>
