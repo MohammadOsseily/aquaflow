@@ -5,7 +5,7 @@ import { BiLogoTiktok } from 'react-icons/bi';
 import GlobalTextField from './GlobalTextField';
 function Footer() {
     return (
-        <div className='  pb-7 md:mb-0'>
+        <div className='  pb-7 md:mb-0 '>
             <hr />
             <div className='mx-auto flex w-[95%] flex-col pt-7 md:w-full md:flex-row  md:justify-between '>
                 <div className='mb-7 md:ml-2'>
