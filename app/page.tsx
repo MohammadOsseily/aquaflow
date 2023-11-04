@@ -4,15 +4,16 @@ import { LuSend } from 'react-icons/lu';
 import { FiShoppingCart } from 'react-icons/fi';
 import 'react-icons';
 import Link from 'next/link';
+import Carsoule from './components/Carsoule';
 
 export default function Home() {
     return (
-        <main className='h-screen min-h-screen'>
-            <div className=' mt-10 flex h-4/5 flex-col gap-4 md:flex-row'>
-                <div className='relative mx-auto flex h-[90%] w-4/5  overflow-hidden rounded-3xl bg-secondary md:w-3/5 md:flex-col'>
+        <main className='h-full'>
+            <div className=' mb-4 mt-10 flex h-full flex-col gap-4 md:flex-row'>
+                <div className='relative mx-auto flex h-[300px] w-4/5 overflow-hidden  rounded-3xl bg-secondary md:h-[600px] md:w-3/5 md:flex-col'>
                     <div className='flex flex-col p-5 md:p-10'>
-                        <div className='block w-3/5  text-5xl text-primary md:text-7xl'>The Simple Bottle Water</div>
-                        <div className='block w-full text-sm  text-primary md:pt-3'>MORE OFFERS</div>
+                        <div className='block w-3/4  text-4xl text-primary md:text-7xl'>The Simple Bottle Water</div>
+                        <div className='block w-full text-xs text-primary  md:pt-3 md:text-sm'>MORE OFFERS</div>
                     </div>
 
                     <Image
@@ -38,8 +39,8 @@ export default function Home() {
                 </div>
 
                 <div className=' mx-auto  h-full w-4/5   gap-2 md:w-2/5 md:flex-col'>
-                    <div className='relative col-span-3 row-span-2 h-4/5 rounded-3xl bg-neutral md:h-[50%]'>
-                        <div className='absolute left-10 top-10 w-3/5  text-5xl text-secondary md:text-6xl'>
+                    <div className='relative col-span-3 row-span-2 h-[250px] rounded-3xl bg-neutral md:h-[330px]'>
+                        <div className='absolute left-10 top-10 w-3/5  text-4xl text-secondary md:text-6xl'>
                             See Our Blog
                         </div>
                         <Image
@@ -53,18 +54,21 @@ export default function Home() {
                             <FiArrowUpRight size={50} />
                         </div>
                     </div>
-                    <div className='relative mt-5 flex h-4/5 rounded-3xl  bg-accent  md:h-[37%] md:flex-col'>
+                    <div className='relative mt-5 flex h-[200px] rounded-3xl  bg-accent  md:h-[250px] md:flex-col'>
                         <div className='absolute left-10 top-10 w-2/6 md:w-1/5'>Have Some Questions?</div>
                         <div className='absolute bottom-[50px] left-10 w-full  text-4xl text-secondary md:text-6xl '>
                             Contact Us
                         </div>
-                        <div className='absolute right-10 top-10'>
+                        <div className='absolute right-10 top-10 text-sm'>
                             <Link href={'/contactUs'}>
                                 <LuSend size={40} />
                             </Link>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className='  flex flex-col'>
+                <Carsoule />
             </div>
         </main>
     );
