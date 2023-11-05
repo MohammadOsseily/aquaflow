@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Carsoule() {
     return (
@@ -24,12 +25,12 @@ function Carsoule() {
                 </div>
             </div>
             <div className='flex w-full justify-center gap-2 py-2'>
-                <a href='#item1' className='btn btn-xs border-0 bg-neutral'>
+                <Link href='#item1' className='btn btn-xs border-0 bg-neutral'>
                     1
-                </a>
-                <a href='#item2' className='btn btn-xs border-0 bg-neutral'>
+                </Link>
+                <Link href='#item2' className='btn btn-xs border-0 bg-neutral'>
                     2
-                </a>
+                </Link>
             </div>
         </>
     );
