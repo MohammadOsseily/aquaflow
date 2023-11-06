@@ -73,7 +73,7 @@ export default function Home() {
             </div>
             <div className=''>
                 <div className='pb-7 text-3xl'>Ps4 Accessories</div>
-                <div className='flex w-full flex-col border-2 border-secondary'>
+                <div className='flex w-full  flex-col border-2 border-secondary'>
                     <div className='flex flex-row'>
                         <div className='h-full w-1/4 py-2 pl-2'>
                             <Image
