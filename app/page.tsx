@@ -81,13 +81,13 @@ export default function Home() {
                                 alt='bottle'
                                 width={300}
                                 height={300}
-                                className='mx-auto  w-8'
+                                className='mx-auto w-8'
                             />
                             <div className=''>dfjsdhfhsdfhsfgsyufsgdfgsdufvuwfysd fysegyfgsdyfsdgfyusdgfysdgf</div>
                             <div>$50</div>
-                            <Link href={'/checkout'}>
+                            <Link href={'/cart'}>
                                 <button className='w-1/2 rounded-full bg-secondary py-3 text-sm font-semibold uppercase text-white hover:bg-gray-500 '>
-                                    Checkout
+                                    Add to cart
                                 </button>
                             </Link>
                         </div>
