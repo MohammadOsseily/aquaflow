@@ -68,7 +68,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className='  flex flex-col'>
+            <div className='flex flex-col'>
                 <Carsoule />
             </div>
             <ListOfProducts />
