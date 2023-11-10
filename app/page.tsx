@@ -5,7 +5,7 @@ import { FiShoppingCart } from 'react-icons/fi';
 import 'react-icons';
 import Link from 'next/link';
 import Carsoule from './components/Carsoule';
-import ProductCardHandler from './components/ProductCardHandler';
+import ListOfProducts from './components/ListOfProducts';
 
 export default function Home() {
     return (
@@ -71,29 +71,7 @@ export default function Home() {
             <div className='  flex flex-col'>
                 <Carsoule />
             </div>
-            <div className=''>
-                <div className='pb-7 text-3xl'>Ps4 Accessories</div>
-                <div className='flex w-full  flex-col border-2 border-secondary'>
-                    <div className='flex flex-row'>
-                        <div className='h-full w-1/4 py-2 pl-2'>
-                            <Image
-                                src={'/static/images/black-bottle.png'}
-                                alt='bottle'
-                                width={300}
-                                height={300}
-                                className='mx-auto w-8'
-                            />
-                            <div className=''>dfjsdhfhsdfhsfgsyufsgdfgsdufvuwfysd fysegyfgsdyfsdgfyusdgfysdgf</div>
-                            <div>$50</div>
-                            <Link href={'/cart'}>
-                                <button className='w-1/2 rounded-full bg-secondary py-3 text-sm font-semibold uppercase text-white hover:bg-gray-500 '>
-                                    Add to cart
-                                </button>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ListOfProducts />
         </main>
     );
 }
