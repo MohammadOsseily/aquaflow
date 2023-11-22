@@ -5,7 +5,7 @@ import { FiShoppingCart } from 'react-icons/fi';
 import 'react-icons';
 import Link from 'next/link';
 import Carsoule from './components/Carsoule';
-import ListOfProducts from './components/ListOfProducts';
+import ListPHandler from './components/ListPHandler';
 
 export default function Home() {
     return (
@@ -71,7 +71,7 @@ export default function Home() {
             <div className='flex flex-col'>
                 <Carsoule />
             </div>
-            <ListOfProducts />
+            <ListPHandler />
         </main>
     );
 }
