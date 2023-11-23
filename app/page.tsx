@@ -6,6 +6,7 @@ import 'react-icons';
 import Link from 'next/link';
 import Carsoule from './components/Carsoule';
 import ListPHandler from './components/ListPHandler';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function Home() {
     return (
@@ -72,6 +73,13 @@ export default function Home() {
                 <Carsoule />
             </div>
             <ListPHandler />
+            <div className='avatar fixed bottom-0 right-0 '>
+                <div
+                    style={{ display: 'flex' }}
+                    className='mb-2  w-16 items-center  justify-center rounded-full bg-gradient-to-r from-green-500 from-10% via-green-400 via-30% to-emerald-500 to-90% '>
+                    <FaWhatsapp size={40} />
+                </div>
+            </div>
         </main>
     );
 }

@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: ReactNode[] }) {
     return (
         <html lang='en'>
             <body
-                className={`${roboto.className} scrollbar scrollbar-thumb-secondary scrollbar-track-primary mx-auto flex  w-full flex-col md:w-3/4`}>
+                className={`${roboto.className} mx-auto flex w-full flex-col scrollbar scrollbar-track-primary  scrollbar-thumb-secondary md:w-3/4`}>
                 <NavBar />
                 {children}
 
