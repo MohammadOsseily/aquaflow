@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import 'react-icons';
 import { CgProfile } from 'react-icons/cg';
+import GlobalTextField from './GlobalTextField';
 
 function NavBar() {
     const [isLoged, setIsLoged] = useState(true);
@@ -28,7 +29,7 @@ function NavBar() {
                     </label>
                     <ul
                         tabIndex={0}
-                        className='menu dropdown-content rounded-box menu-sm z-[1] mt-3 w-52 bg-base-100 p-2 shadow'>
+                        className='menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow'>
                         <li>
                             <Link href='/products'>Product</Link>
                         </li>
@@ -37,6 +38,24 @@ function NavBar() {
                         </li>
                         <li>
                             <Link href={'/contactUs'}>Contact Us</Link>
+                        </li>
+                        <li className='flex flex-row justify-between'>
+                            <input type='text' placeholder='Type here' className='input w-32 ' />
+                            <button className='btn btn-circle btn-ghost flex content-center '>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    className='h-5 w-5'
+                                    fill='none'
+                                    viewBox='0 0 24 24'
+                                    stroke='currentColor'>
+                                    <path
+                                        strokeLinecap='round'
+                                        strokeLinejoin='round'
+                                        strokeWidth='2'
+                                        d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
+                                    />
+                                </svg>
+                            </button>
                         </li>
                     </ul>
                 </div>
@@ -59,7 +78,8 @@ function NavBar() {
             </div>
 
             <div className='navbar-end md:w-2/5'>
-                <button className='btn btn-circle btn-ghost'>
+                <input type='text' placeholder='Type here' className='input hidden w-full max-w-xs md:flex' />
+                <button className='btn btn-circle btn-ghost ml-1 hidden md:flex'>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
                         className='h-5 w-5'
@@ -74,6 +94,7 @@ function NavBar() {
                         />
                     </svg>
                 </button>
+
                 <div className='flex-none'>
                     <div className='dropdown dropdown-end'>
                         <label tabIndex={0} className='btn btn-circle btn-ghost'>
