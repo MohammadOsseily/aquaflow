@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import { FiArrowUpRight } from 'react-icons/fi';
 import { LuSend } from 'react-icons/lu';
@@ -7,8 +8,17 @@ import Link from 'next/link';
 import Carsoule from './components/Carsoule';
 import ListPHandler from './components/ListPHandler';
 import { FaWhatsapp } from 'react-icons/fa';
+import { useRef } from 'react';
 
 export default function Home() {
+    const targetRef = useRef<HTMLDivElement | null>(null);
+
+    const scrollToTarget = () => {
+        // Check if the ref is assigned before trying to access its current property
+        if (targetRef.current) {
+            targetRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
     return (
         <main className='h-full'>
             <div className=' mb-4 mt-10 flex h-full flex-col gap-4 md:flex-row'>
@@ -78,6 +88,17 @@ export default function Home() {
                     style={{ display: 'flex' }}
                     className='mb-2  w-16 items-center  justify-center rounded-full bg-gradient-to-r from-green-500 from-10% via-green-400 via-30% to-emerald-500 to-90% '>
                     <FaWhatsapp size={40} />
+                </div>
+            </div>
+            <div>
+                <div>
+                    <button onClick={scrollToTarget}>Scroll to Target</button>
+
+                    {/* Your target element */}
+                    <div ref={targetRef}>
+                        {/* Content you want to scroll to */}
+                        <p>This is the target element you want to scroll to.</p>
+                    </div>
                 </div>
             </div>
         </main>
