@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Product } from '../../types/product';
 import React, { useState } from 'react';
+import { IoArrowBack } from 'react-icons/io5';
 
 type props = {
     products: Product;
@@ -28,6 +29,10 @@ function ProductModuel({ products }: props) {
                         height={50}
                         alt={products.productName}
                     />
+                </div>
+
+                <div className=''>
+                    <IoArrowBack size={25} />
                 </div>
 
                 <div className='flex h-full w-full flex-col  pt-4 md:w-1/2 '>
