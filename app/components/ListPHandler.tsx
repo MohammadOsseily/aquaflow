@@ -34,6 +34,7 @@ const products = {
 };
 function ListPHandler() {
     const [selectedProduct, setSelectedProduct] = useState<Product | undefined>(undefined);
+
     return (
         <div>
             {products.data.map((product, index) => {
@@ -46,7 +47,7 @@ function ListPHandler() {
 
             {selectedProduct != undefined && (
                 <div className='fixed inset-0 z-20 flex h-full w-full items-center justify-center   bg-black/50  backdrop-blur-sm'>
-                    <ProductModuel products={selectedProduct} />
+                    <ProductModuel products={selectedProduct} setSelectedProduct={setSelectedProduct} />
                 </div>
             )}
         </div>
