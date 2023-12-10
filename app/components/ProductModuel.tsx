@@ -17,7 +17,7 @@ function ProductModuel({ products, setSelectedProduct }: props) {
             <div className='flex h-full w-full flex-col md:flex-row '>
                 <div className='flex w-full flex-row items-center justify-center md:w-1/2 md:flex-col'>
                     <Image
-                        className='w-20 md:w-40 '
+                        className='w-20 md:w-40  '
                         src={'/static/images/' + products.image}
                         width={100}
                         height={50}
