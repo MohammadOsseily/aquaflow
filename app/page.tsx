@@ -95,10 +95,7 @@ export default function Home() {
                     <button onClick={scrollToTarget}>Scroll to Target</button>
 
                     {/* Your target element */}
-                    <div ref={targetRef}>
-                        {/* Content you want to scroll to */}
-                        <p>This is the target element you want to scroll to.</p>
-                    </div>
+                    <div ref={targetRef}>{/* Content you want to scroll to */}</div>
                 </div>
             </div>
         </main>
