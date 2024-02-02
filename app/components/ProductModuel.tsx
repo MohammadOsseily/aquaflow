@@ -33,7 +33,7 @@ function ProductModuel({ products, setSelectedProduct }: props) {
                     <div className='pt-4 text-2xl text-secondary md:text-3xl'>Description</div>
                     <div className='pt-4 text-lg text-secondary md:text-2xl'>{products.description}</div>
                 </div>
-                <div className='pb-6 pt-6 text-3xl md:pb-0 md:text-4xl' onClick={handleProductChange}>
+                <div className='cursor-pointer  pb-6 pt-6 text-3xl md:pb-0 md:text-4xl' onClick={handleProductChange}>
                     <IoArrowBack />
                 </div>
             </div>

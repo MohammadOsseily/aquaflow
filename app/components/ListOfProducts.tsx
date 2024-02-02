@@ -9,7 +9,7 @@ type props = {
 };
 function ListOfProducts({ product, setSelectedProduct }: props) {
     return (
-        <div className='pt-4 '>
+        <div className='cursor-pointer pt-4'>
             <div className='pb-7 text-3xl'>{product.productHighlight}</div>
             <div
                 className='neumorphism no-scrollbar flex  w-full flex-col overflow-x-scroll '
