@@ -1,6 +1,6 @@
 import 'react-icons';
 import AllAddresses from '../../components/AllAdresses';
-import { Pagination } from '../../components/ProductCard';
+import { PaginationType } from '../../components/ProductCard';
 import AccountBar from '../../components/AccountBar';
 
 const pagination = {

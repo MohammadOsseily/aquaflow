@@ -1,5 +1,5 @@
-import { CartDetailes } from './cartDetailes';
+import { CartDetailesType } from './cartDetailes';
 
-export type CartList = {
-    data: CartDetailes[];
+export type CartListType = {
+    data: CartDetailesType[];
 };

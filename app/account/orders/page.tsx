@@ -1,5 +1,5 @@
-import OrderHistory from '../../components/OrderHistory';
-import { Pagination } from '../../components/ProductCard';
+import OrderHistoryType from '../../components/OrderHistory';
+import { PaginationType } from '../../components/ProductCard';
 import AccountBar from '../../components/AccountBar';
 
 const pagination = {

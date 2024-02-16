@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import { Product } from '../../types/product';
+import { ProductType } from '../../types/product';
 
 import { IoArrowBack } from 'react-icons/io5';
 
 type props = {
-    products: Product;
-    setSelectedProduct: React.Dispatch<React.SetStateAction<Product | undefined>>;
+    products: ProductType;
+    setSelectedProduct: React.Dispatch<React.SetStateAction<ProductType | undefined>>;
 };
 
 function ProductModuel({ products, setSelectedProduct }: props) {

@@ -1,4 +1,4 @@
-export type CartDetailes = {
+export type CartDetailesType = {
     productName: string;
     companyName: string;
     price: number;

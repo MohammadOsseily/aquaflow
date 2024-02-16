@@ -1,9 +1,9 @@
 import { PiTrashDuotone } from 'react-icons/pi';
 import { FiEdit2 } from 'react-icons/fi';
-import { UserAddresses } from '../../types/addresses';
+import { UserAddressesType } from '../../types/addresses';
 
 type props = {
-    userAddress: UserAddresses;
+    userAddress: UserAddressesType;
 };
 function AllAddresses({ userAddress }: props) {
     return (

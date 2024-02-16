@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import ListOfProducts from './ListOfProducts';
-import { Product } from '../../types/product';
+import { ProductType } from '../../types/product';
 import ProductModuel from './ProductModuel';
 
 const products = {
@@ -33,7 +33,7 @@ const products = {
     ],
 };
 function ListPHandler() {
-    const [selectedProduct, setSelectedProduct] = useState<Product | undefined>(undefined);
+    const [selectedProduct, setSelectedProduct] = useState<ProductType | undefined>(undefined);
 
     return (
         <div>

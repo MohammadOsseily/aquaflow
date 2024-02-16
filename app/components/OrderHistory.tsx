@@ -1,8 +1,8 @@
-import { OrderHistory } from '../../types/ordersHistory';
+import { OrderHistoryType } from '../../types/ordersHistory';
 import { BiDotsVerticalRounded } from 'react-icons/bi';
 
 type props = {
-    orderHistory: OrderHistory;
+    orderHistory: OrderHistoryType;
 };
 
 function OrderHistory({ orderHistory }: props) {
@@ -24,4 +24,4 @@ function OrderHistory({ orderHistory }: props) {
         </>
     );
 }
-export default OrderHistory;
+export default OrderHistoryType;

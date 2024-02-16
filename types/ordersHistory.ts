@@ -1,4 +1,4 @@
-export type OrderHistory = {
+export type OrderHistoryType = {
     id: number;
     payment: string;
     date: string;

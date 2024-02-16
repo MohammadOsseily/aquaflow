@@ -1,14 +1,14 @@
 import Image from 'next/image';
 import { FiShoppingCart } from 'react-icons/fi';
 import 'react-icons';
-import { Product } from '../../types/product';
+import { ProductType } from '../../types/product';
 
-import { Pagination } from '../../types/pagination';
+import { PaginationType } from '../../types/pagination';
 import Link from 'next/link';
 import { SetStateAction } from 'react';
 
 type paginationProps = {
-    pagination: Pagination;
+    pagination: PaginationType;
 };
 export function Pagination({ pagination }: paginationProps) {
     return (
@@ -49,8 +49,8 @@ export function Pagination({ pagination }: paginationProps) {
     );
 }
 type props = {
-    product: Product;
-    setSelectedProduct: React.Dispatch<SetStateAction<Product | undefined>>;
+    product: ProductType;
+    setSelectedProduct: React.Dispatch<SetStateAction<ProductType | undefined>>;
 };
 
 function ProductCard({ product, setSelectedProduct }: props) {

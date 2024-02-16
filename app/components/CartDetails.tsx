@@ -4,10 +4,10 @@ import { BiPlus } from 'react-icons/bi';
 import { PiTrashDuotone } from 'react-icons/pi';
 
 import 'react-icons';
-import { CartDetailes } from '../../types/cartDetailes';
+import { CartDetailesType } from '../../types/cartDetailes';
 
 type props = {
-    cartDetailes: CartDetailes;
+    cartDetailes: CartDetailesType;
 };
 
 function CartDetails({ cartDetailes }: props) {

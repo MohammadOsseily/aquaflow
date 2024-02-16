@@ -1,7 +1,7 @@
-import { GlobaltextField } from '../../types/globalTextField';
+import { GlobaltextFieldType } from '../../types/globalTextField';
 
 type props = {
-    globalTextField: GlobaltextField;
+    globalTextField: GlobaltextFieldType;
 };
 function GlobalTextField({ globalTextField }: props) {
     return (

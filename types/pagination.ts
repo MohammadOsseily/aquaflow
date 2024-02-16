@@ -1,8 +1,4 @@
-import { UserAddresses } from './addresses';
-import { OrderHistory } from './ordersHistory';
-import { Product } from './product';
-
-export type Pagination = {
+export type PaginationType = {
     total: number;
     per_page: number;
     current_page: number;
@@ -14,7 +10,5 @@ export type Pagination = {
     path: string;
     from: number;
     to: number;
-    data?: Product[];
-    orderData?: OrderHistory[];
-    userAddress?: UserAddresses[];
+    data: [];
 };

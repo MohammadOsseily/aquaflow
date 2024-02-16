@@ -1,4 +1,4 @@
-export type GlobaltextField = {
+export type GlobaltextFieldType = {
     inputName: string;
     inputType: string;
     inputAutoComplete: string;
