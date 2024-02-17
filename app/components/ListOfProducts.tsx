@@ -21,12 +21,13 @@ function ListOfProducts({ product, setSelectedProduct }: props) {
                             <div key={index} className='ml-7 h-full w-1/4 py-7 hover:brightness-[80%]'>
                                 <Image
                                     alt={product.label}
-                                    src={'/static/images/' + product.gallery}
+                                    src={product.gallery[1]}
                                     width={300}
                                     height={300}
                                     className='mx-auto w-8'
                                 />
                                 <div className='ml-3 truncate break-all pt-4'>{product.label} </div>
+                                <div className='text-sm'>{product.gallery[1]}</div>
                                 <div className='ml-3 flex justify-center pt-4 text-lg font-bold'>${product.price}</div>
                                 <Link href={'/cart'}>
                                     <button className=' ml-3 mt-4 w-full rounded-full bg-secondary py-3 text-xs font-semibold uppercase text-white hover:bg-gray-500 md:ml-8 md:w-4/5 md:text-sm '>

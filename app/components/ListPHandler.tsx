@@ -1,57 +1,43 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ListOfProducts from './ListOfProducts';
 import { ProductType } from '../../types/product';
 import ProductModuel from './ProductModuel';
+import { PaginationType } from '../../types/pagination';
 
-const products = {
-    data: [
-        {
-            price: 45,
-            productHighlight: 'Ps4 Accessories',
-            productName: 'Call of Duty: Modern Warfare 3',
-            image: 'black-bottle.png',
-            description:
-                'Call of Duty: Modern Warfare 3 Call of Duty: Modern Warfare 3 Call of Duty: Modern Warfare 3 Call of Duty: Modern Warfare 3',
-        },
-        {
-            price: 90,
-            productHighlight: 'Ps4 Accessories',
-            productName: 'Call of Duty: Modern Warfare 3',
-            image: 'black-bottle.png',
-            description:
-                'Call of Duty: Modern Warfare 3 Call of Duty: Modern Warfare 3 Call of Duty: Modern Warfare 3 Call of Duty: Modern Warfare 3',
-        },
-        {
-            price: 80,
-            productHighlight: 'Ps4 Accessories',
-            productName: 'Call of Duty: Modern Warfare 3',
-            image: 'black-bottle.png',
-            description:
-                'Call of Duty: Modern Warfar Call of Duty: Modern Warfare 3 Call of Duty: Modern Warfare 3 Call of Duty: Modern Warfare 3 3',
-        },
-    ],
-};
 function ListPHandler() {
     const [selectedProduct, setSelectedProduct] = useState<ProductType | undefined>(undefined);
+    const [products, setProducts] = useState<PaginationType | null>(null);
+    const [isLoading, setLoading] = useState(true);
+    useEffect(() => {
+        fetch('http://127.0.0.1:8000/api/product/show', { method: 'post' })
+            .then((res) => res.json())
+            .then((data) => {
+                setProducts(data);
+                setLoading(false);
+            });
+    }, []);
+    if (isLoading) return <p>Loading...</p>;
+    else if (!products) return <p>No profile data</p>;
+    else {
+        return (
+            <div>
+                {products?.data?.map((product, index) => {
+                    return (
+                        <div key={index}>
+                            <ListOfProducts product={product} setSelectedProduct={setSelectedProduct} key={index} />
+                        </div>
+                    );
+                })}
 
-    return (
-        <div>
-            {products.data.map((product, index) => {
-                return (
-                    <div key={index}>
-                        <ListOfProducts product={product} setSelectedProduct={setSelectedProduct} key={index} />
+                {selectedProduct != undefined && (
+                    <div className='fixed inset-0 z-20 flex h-full w-full items-center justify-center   bg-black/50  backdrop-blur-sm'>
+                        <ProductModuel products={selectedProduct} setSelectedProduct={setSelectedProduct} />
                     </div>
-                );
-            })}
-
-            {selectedProduct != undefined && (
-                <div className='fixed inset-0 z-20 flex h-full w-full items-center justify-center   bg-black/50  backdrop-blur-sm'>
-                    <ProductModuel products={selectedProduct} setSelectedProduct={setSelectedProduct} />
-                </div>
-            )}
-        </div>
-    );
+                )}
+            </div>
+        );
+    }
 }
 
 export default ListPHandler;

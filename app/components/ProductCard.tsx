@@ -3,51 +3,9 @@ import { FiShoppingCart } from 'react-icons/fi';
 import 'react-icons';
 import { ProductType } from '../../types/product';
 
-import { PaginationType } from '../../types/pagination';
 import Link from 'next/link';
 import { SetStateAction } from 'react';
 
-type paginationProps = {
-    pagination: PaginationType;
-};
-export function Pagination({ pagination }: paginationProps) {
-    return (
-        <div className='join flex w-full justify-center'>
-            {pagination.current_page != 1 && (
-                <Link
-                    href={pagination.first_page_url}
-                    className='btn join-item bg-primary hover:bg-secondary hover:text-primary'>
-                    1
-                </Link>
-            )}
-
-            {pagination.prev_page_url && (
-                <Link
-                    href={pagination.prev_page_url}
-                    className='btn join-item bg-primary  hover:bg-secondary hover:text-primary'>
-                    {pagination.current_page - 1}
-                </Link>
-            )}
-            <div className='btn join-item  bg-primary hover:bg-secondary hover:text-primary'>
-                {pagination.current_page}
-            </div>
-            {pagination.next_page_url && (
-                <Link
-                    href={pagination.next_page_url}
-                    className='btn join-item bg-primary hover:bg-secondary hover:text-primary'>
-                    {pagination.current_page + 1}
-                </Link>
-            )}
-            {pagination.last_page_url && pagination.current_page != pagination.last_page && (
-                <Link
-                    href={pagination.last_page_url}
-                    className='btn join-item bg-primary hover:bg-secondary hover:text-primary'>
-                    {pagination.last_page}
-                </Link>
-            )}
-        </div>
-    );
-}
 type props = {
     product: ProductType;
     setSelectedProduct: React.Dispatch<SetStateAction<ProductType | undefined>>;
@@ -57,10 +15,10 @@ function ProductCard({ product, setSelectedProduct }: props) {
     return (
         <div onClick={() => setSelectedProduct(product)}>
             <figure>
-                <Image alt={product.productName} width={50} height={50} src={'/static/images/' + product.image} />
+                <Image alt={product.label} width={50} height={50} src={product.gallery[0]} />
             </figure>
             <div className='card-body flex justify-between'>
-                <h2 className='card-title flex justify-center'>{product.productName}</h2>
+                <h2 className='card-title flex justify-center'>{product.label}</h2>
 
                 <div className='card-actions flex  items-center'>
                     <p className='font-bold'>{product.price}$</p>
