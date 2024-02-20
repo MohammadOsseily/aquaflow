@@ -18,6 +18,7 @@ function ProductCardHandler() {
                 setLoading(false);
             });
     }, []);
+
     if (isLoading) return <p>Loading...</p>;
     else if (!products) return <p>No profile data</p>;
     else {

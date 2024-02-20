@@ -13,9 +13,9 @@ type props = {
 
 function ProductCard({ product, setSelectedProduct }: props) {
     return (
-        <div onClick={() => setSelectedProduct(product)}>
-            <figure>
-                <Image alt={product.label} width={50} height={50} src={product.gallery[3]} />
+        <div className='flex flex-col items-center' onClick={() => setSelectedProduct(product)}>
+            <figure className=' text-center' style={{ width: '70px', height: '70px' }}>
+                <Image className='' alt={product.label} width={50} height={50} src={product.gallery[0]} />
             </figure>
             <div className='card-body flex justify-between'>
                 <h2 className='card-title flex justify-center'>{product.label}</h2>
