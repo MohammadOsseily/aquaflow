@@ -69,9 +69,6 @@ function Addresses() {
                     return <AllAddresses userAddress={addressInfo} key={index} />;
                 })}
             </div>
-            <div className='pt-7'>
-                <Pagination pagination={pagination} />
-            </div>
         </div>
     );
 }

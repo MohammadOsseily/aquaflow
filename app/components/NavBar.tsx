@@ -7,7 +7,7 @@ import { CgProfile } from 'react-icons/cg';
 import GlobalTextField from './GlobalTextField';
 
 function NavBar() {
-    const [isLoged, setIsLoged] = useState(true);
+    const [isLoged, setIsLoged] = useState(false);
     return (
         <div className='bg-red navbar'>
             <div className='navbar-start md:w-full'>

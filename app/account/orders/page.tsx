@@ -1,5 +1,4 @@
 import OrderHistoryType from '../../components/OrderHistory';
-import { PaginationType } from '../../components/ProductCard';
 import AccountBar from '../../components/AccountBar';
 
 const pagination = {
@@ -67,9 +66,6 @@ function Orders() {
                 {pagination.orderHistory.map((product, index) => {
                     return <OrderHistory orderHistory={product} key={index} />;
                 })}
-            </div>
-            <div className='pt-7'>
-                <Pagination pagination={pagination} />
             </div>
         </div>
     );
