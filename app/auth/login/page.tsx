@@ -15,16 +15,6 @@ function login() {
                 </header>
                 <form>
                     <div>
-                        <label className='mb-2 block text-secondary' htmlFor='username'>
-                            Username
-                        </label>
-                        <input
-                            className='mb-6 w-full border-b-2 border-secondary p-2 text-secondary outline-none focus:bg-gray-300'
-                            type='text'
-                            name='username'
-                        />
-                    </div>
-                    <div>
                         <label className='mb-2 block text-secondary' htmlFor='email'>
                             Email
                         </label>
