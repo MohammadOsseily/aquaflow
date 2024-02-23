@@ -21,6 +21,7 @@ function register() {
                         </label>
                         <input
                             className='mb-6 w-full border-b-2 border-secondary p-2 text-secondary outline-none focus:bg-gray-300'
+                            id='username'
                             type='text'
                             name='username'
                         />
@@ -31,6 +32,7 @@ function register() {
                         </label>
                         <input
                             className='mb-6 w-full border-b-2 border-secondary p-2 text-secondary outline-none focus:bg-gray-300'
+                            id='email'
                             type='text'
                             name='email'
                         />
@@ -41,6 +43,7 @@ function register() {
                         </label>
                         <input
                             className='mb-6 w-full border-b-2 border-secondary p-2 text-secondary outline-none focus:bg-gray-300'
+                            id='password'
                             type='password'
                             name='password'
                         />

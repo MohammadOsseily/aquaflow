@@ -13,7 +13,7 @@ function login() {
                         height={200}
                     />
                 </header>
-                <form>
+                <form action={} method='POST'>
                     <div>
                         <label className='mb-2 block text-secondary' htmlFor='email'>
                             Email
