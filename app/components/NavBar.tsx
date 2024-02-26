@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 import 'react-icons';
 import { CgProfile } from 'react-icons/cg';
-import GlobalTextField from './GlobalTextField';
 
 function NavBar() {
     const [isLoged, setIsLoged] = useState(false);
