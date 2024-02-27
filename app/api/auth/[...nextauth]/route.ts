@@ -82,7 +82,7 @@ export const authOptions: NextAuthOptions = {
             return token;
         },
         async session({ session, token }) {
-            session.accessToken = token.access_token;
+            session.accessToken = token.access_token as string;
             session.user = token.user;
             return session;
         },

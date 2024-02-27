@@ -24,7 +24,6 @@ function LoginComponent() {
 
     return (
         <div className='flex h-screen '>
-            <div>{s}</div>
             <div className='neumorphism m-auto w-full max-w-xs rounded bg-white p-5'>
                 <header>
                     <Image
