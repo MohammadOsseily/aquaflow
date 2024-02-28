@@ -38,6 +38,7 @@ export const authOptions: NextAuthOptions = {
                     email: credentials?.email,
                     password: credentials?.password,
                 };
+                // header
                 const headers = new Headers({
                     Cookie: `laravel_session=${sessionKey}`,
                     'Content-Type': 'application/json',
