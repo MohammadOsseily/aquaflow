@@ -60,7 +60,7 @@ function register() {
                     </div>
                     <div>
                         <input
-                            className='mb-6 w-full rounded-xl bg-secondary px-4 py-2 font-bold  text-white hover:bg-neutral'
+                            className='mb-6 w-full  rounded-xl bg-secondary px-4 py-2 font-bold  text-white hover:bg-neutral'
                             type='submit'
                         />
                     </div>
