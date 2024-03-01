@@ -136,7 +136,7 @@ function NavBar() {
                             <Link href={'/auth/login'}>Login</Link>
                         </div>
                         <div className=' ml-1 flex h-10 w-16 items-center justify-center rounded-full bg-secondary text-sm text-white md:ml-0 md:h-14 md:w-20  md:text-base'>
-                            <Link href={'/auth/register'}>Sign Up</Link>
+                            <Link href={'/register'}>Sign Up</Link>
                         </div>
                     </div>
                 )}
