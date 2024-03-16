@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+// types
 type TRegisterForm = {
     name: string;
     email: string;
