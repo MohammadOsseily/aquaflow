@@ -16,7 +16,7 @@ export const authOptions: NextAuthOptions = {
 
                 const setCookieHeader = res.headers.get('set-cookie');
                 // console.log("setCookieHeader", setCookieHeader)
-                // you'll find your_site_session key in this console log
+                // you'll find your_sitne_session key in this console log
 
                 const cookies = setCookieHeader?.split(', ');
                 // console.log(cookies)
