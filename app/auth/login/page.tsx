@@ -1,6 +1,6 @@
-import LoginComponent from '../../components/LoginComponent';
+import Login from '../../components/client/LoginForm';
 
 function login() {
-    return <LoginComponent />;
+    return <Login />;
 }
 export default login;

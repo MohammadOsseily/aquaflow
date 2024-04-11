@@ -1,21 +1,14 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { PaginationType } from '../../types/pagination';
 import { UserType } from '../../types/user';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// function Form() {
-//     function handleSubmit(e) {
-//       e.preventDefault();
-//       console.log('You clicked submit.');
-//     }
-
 function LoginComponent() {
     const [selectedUser, setSelectedUser] = useState<UserType | undefined>(undefined);
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/api/user/login', { method: 'post' })
+        fetch('http://127.0.0.1:8000/api/user/login', { method: 'GET' })
             .then((res) => res.json())
             .then((data) => {
                 setSelectedUser(data);
@@ -55,6 +48,7 @@ function LoginComponent() {
                             name='password'
                         />
                     </div>
+
                     <button
                         className='mb-6 w-full rounded-xl bg-secondary px-4 py-2 font-bold text-white hover:bg-neutral'
                         type='submit'>
