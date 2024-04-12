@@ -188,6 +188,7 @@
 'use client';
 import { useState } from 'react';
 import axios from 'axios';
+import Image from 'next/image';
 
 const RegisterForm = () => {
     const [name, setName] = useState('');
@@ -198,16 +199,25 @@ const RegisterForm = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        const authToken = 'your-auth-token';
         if (password !== passwordConfirmation) {
             setError('Passwords do not match');
             return;
         }
         try {
-            const response = await axios.post('http://127.0.0.1:8000/api/register', {
-                name,
-                email,
-                password,
-            });
+            const response = await axios.post(
+                'http://127.0.0.1:8000/api/register',
+                {
+                    name,
+                    email,
+                    password,
+                },
+                {
+                    headers: {
+                        Authorization: `Bearer ${authToken}`,
+                    },
+                }
+            );
             // Handle successful registration (e.g., redirect)
             console.log('Registration successful:', response.data);
         } catch (error) {
@@ -217,85 +227,87 @@ const RegisterForm = () => {
     };
 
     return (
-        <div className='flex min-h-screen items-center justify-center bg-gray-50 px-4 py-12 sm:px-6 lg:px-8'>
-            <div className='w-full max-w-md space-y-8'>
-                <div>
-                    <h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>Create an account</h2>
-                </div>
-                <form className='mt-8 space-y-6' onSubmit={handleSubmit}>
+        <div className='flex h-screen'>
+            <div className='neumorphism m-auto w-full max-w-md rounded bg-white p-5'>
+                <header>
+                    <Image
+                        className='mx-auto mb-5 w-20'
+                        src='/static/images/logo.png'
+                        alt='d'
+                        width={200}
+                        height={200}
+                    />
+                </header>
+                <form className='' onSubmit={handleSubmit}>
                     <input type='hidden' name='remember' defaultValue='true' />
-                    <div className='-space-y-px rounded-md shadow-sm'>
-                        <div>
-                            <label htmlFor='name' className='sr-only'>
-                                Name
-                            </label>
-                            <input
-                                id='name'
-                                name='name'
-                                type='text'
-                                autoComplete='name'
-                                required
-                                className='relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
-                                placeholder='Name'
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor='email-address' className='sr-only'>
-                                Email address
-                            </label>
-                            <input
-                                id='email-address'
-                                name='email'
-                                type='email'
-                                autoComplete='email'
-                                required
-                                className='relative block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
-                                placeholder='Email address'
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor='password' className='sr-only'>
-                                Password
-                            </label>
-                            <input
-                                id='password'
-                                name='password'
-                                type='password'
-                                autoComplete='new-password'
-                                required
-                                className='relative block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
-                                placeholder='Password'
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor='password-confirmation' className='sr-only'>
-                                Confirm Password
-                            </label>
-                            <input
-                                id='password-confirmation'
-                                name='password_confirmation'
-                                type='password'
-                                autoComplete='new-password'
-                                required
-                                className='relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
-                                placeholder='Confirm Password'
-                                value={passwordConfirmation}
-                                onChange={(e) => setPasswordConfirmation(e.target.value)}
-                            />
-                        </div>
+
+                    <div>
+                        <label htmlFor='name' className='mb-2 block text-secondary'>
+                            Name
+                        </label>
+                        <input
+                            id='name'
+                            name='name'
+                            type='text'
+                            autoComplete='name'
+                            required
+                            className='mb-6 w-full border-b-2 border-secondary p-2 text-secondary outline-none focus:bg-gray-300'
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                        />
                     </div>
+                    <div>
+                        <label htmlFor='email-address' className='mb-2 block text-secondary'>
+                            Email address
+                        </label>
+                        <input
+                            id='email-address'
+                            name='email'
+                            type='email'
+                            autoComplete='email'
+                            required
+                            className='mb-6 w-full border-b-2 border-secondary p-2 text-secondary outline-none focus:bg-gray-300'
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor='password' className='mb-2 block text-secondary'>
+                            Password
+                        </label>
+                        <input
+                            id='password'
+                            name='password'
+                            type='password'
+                            autoComplete='new-password'
+                            required
+                            className='mb-6 w-full border-b-2 border-secondary p-2 text-secondary outline-none focus:bg-gray-300'
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor='password-confirmation' className='mb-2 block text-secondary'>
+                            Confirm Password
+                        </label>
+                        <input
+                            id='password-confirmation'
+                            name='password_confirmation'
+                            type='password'
+                            autoComplete='new-password'
+                            required
+                            className='mb-6 w-full border-b-2 border-secondary p-2 text-secondary outline-none focus:bg-gray-300'
+                            value={passwordConfirmation}
+                            onChange={(e) => setPasswordConfirmation(e.target.value)}
+                        />
+                    </div>
+
                     {error && <p className='mt-2 text-center text-sm text-red-600'>{error}</p>}
                     <div>
                         <button
                             type='submit'
-                            className='flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'>
-                            Register
+                            className='mb-6 w-full  rounded-xl bg-secondary px-4 py-2 font-bold  text-white hover:bg-neutral'>
+                            Submit
                         </button>
                     </div>
                 </form>
