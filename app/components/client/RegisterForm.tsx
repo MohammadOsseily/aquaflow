@@ -189,6 +189,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const RegisterForm = () => {
     const [name, setName] = useState('');
@@ -199,25 +200,17 @@ const RegisterForm = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        const authToken = 'your-auth-token';
+
         if (password !== passwordConfirmation) {
             setError('Passwords do not match');
             return;
         }
         try {
-            const response = await axios.post(
-                'http://127.0.0.1:8000/api/register',
-                {
-                    name,
-                    email,
-                    password,
-                },
-                {
-                    headers: {
-                        Authorization: `Bearer ${authToken}`,
-                    },
-                }
-            );
+            const response = await axios.post('http://127.0.0.1:8000/api/register', {
+                name,
+                email,
+                password,
+            });
             // Handle successful registration (e.g., redirect)
             console.log('Registration successful:', response.data);
         } catch (error) {
@@ -311,6 +304,14 @@ const RegisterForm = () => {
                         </button>
                     </div>
                 </form>
+                <div>
+                    <Link className='float-left text-sm text-secondary hover:text-neutral' href='/auth/forgetPass'>
+                        Forgot Password?
+                    </Link>
+                    <Link className='float-right text-sm text-secondary hover:text-neutral' href='/auth/login'>
+                        Login
+                    </Link>
+                </div>
             </div>
         </div>
     );
