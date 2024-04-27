@@ -73,7 +73,7 @@ const Login = () => {
                     <Link className='float-left text-sm text-secondary hover:text-neutral' href='/auth/forgetPass'>
                         Forgot Password?
                     </Link>
-                    <Link className='float-right text-sm text-secondary hover:text-neutral' href='/auth/register'>
+                    <Link className='float-right text-sm text-secondary hover:text-neutral' href='/register'>
                         Register
                     </Link>
                 </div>
