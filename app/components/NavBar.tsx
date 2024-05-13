@@ -7,6 +7,11 @@ import { CgProfile } from 'react-icons/cg';
 
 function NavBar() {
     const [isLoged, setIsLoged] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    };
     return (
         <div className='bg-red navbar'>
             <div className='navbar-start md:w-full'>
@@ -38,6 +43,32 @@ function NavBar() {
                         <li>
                             <Link href={'/contactUs'}>Contact Us</Link>
                         </li>
+                        <li>
+                            <div className='dropdown dropdown-hover btn-ghost rounded-xl  transition duration-300 ease-in-out'>
+                                <div tabIndex={0} role='button' onClick={toggleDropdown}>
+                                    Vendors
+                                </div>
+                                {isDropdownOpen && (
+                                    <ul
+                                        tabIndex={0}
+                                        className='menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow'>
+                                        <li>
+                                            <Link href='/vendors/vendor1'>Vendor 1</Link>
+                                        </li>
+                                        <li>
+                                            <Link href='/vendors/vendor2'>Vendor 2</Link>
+                                        </li>
+                                        <li>
+                                            <Link href='/vendors/vendor3'>Vendor 3</Link>
+                                        </li>
+                                        <li>
+                                            <Link href='/vendors/vendor4'>Vendor 4</Link>
+                                        </li>
+                                    </ul>
+                                )}
+                            </div>
+                        </li>
+
                         <li className='flex flex-row justify-between'>
                             <input type='text' placeholder='Type here' className='input w-32 ' />
                             <button className='btn btn-circle btn-ghost flex content-center '>
@@ -73,6 +104,27 @@ function NavBar() {
                     <Link className='btn-ghost rounded-xl p-2 transition duration-300 ease-in-out' href={'/contactUs'}>
                         Contact Us
                     </Link>
+                    <div className='dropdown dropdown-bottom btn-ghost rounded-xl p-2 transition duration-300 ease-in-out'>
+                        <div tabIndex={0} role='button'>
+                            Vendors
+                        </div>
+                        <ul
+                            tabIndex={0}
+                            className='menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow'>
+                            <li>
+                                <Link href={''}>Vendor 1</Link>
+                            </li>
+                            <li>
+                                <Link href={''}>Vendor 2</Link>
+                            </li>
+                            <li>
+                                <Link href={''}>Vendor 3</Link>
+                            </li>
+                            <li>
+                                <Link href={''}>Vendor 4</Link>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
