@@ -112,16 +112,16 @@ function NavBar() {
                             tabIndex={0}
                             className='menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow'>
                             <li>
-                                <Link href={''}>Vendor 1</Link>
+                                <Link href='/vendors/vendor1'>Vendor 1</Link>
                             </li>
                             <li>
-                                <Link href={''}>Vendor 2</Link>
+                                <Link href={'/vendors/vendor2'}>Vendor 2</Link>
                             </li>
                             <li>
-                                <Link href={''}>Vendor 3</Link>
+                                <Link href={'/vendors/vendor3'}>Vendor 3</Link>
                             </li>
                             <li>
-                                <Link href={''}>Vendor 4</Link>
+                                <Link href={'/vendors/vendor4'}>Vendor 4</Link>
                             </li>
                         </ul>
                     </div>

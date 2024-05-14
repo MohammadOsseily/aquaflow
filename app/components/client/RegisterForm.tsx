@@ -25,10 +25,11 @@ const RegisterForm = () => {
                 password,
             });
             // Handle successful registration (e.g., redirect)
-            console.log('Registration successful:', response.data);
+            alert({ 'Registration successful:': response.data });
         } catch (error) {
             // Handle registration error (e.g., display error message)
             setError('Registration failed. Please try again.');
+            alert('register failed');
         }
     };
 

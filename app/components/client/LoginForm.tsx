@@ -17,7 +17,7 @@ const Login = () => {
                 password,
             });
             // Handle successful login (e.g., store token, redirect)
-            console.log('Login successful:', response.data);
+            alert({ 'Login successful:': response.status });
         } catch (error) {
             // Handle login error (e.g., display error message)
             setError('Invalid email or password');
