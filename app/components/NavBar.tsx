@@ -4,9 +4,10 @@ import Link from 'next/link';
 import { useState } from 'react';
 import 'react-icons';
 import { CgProfile } from 'react-icons/cg';
+import { useAuthStore } from './useAuthStore';
 
 function NavBar() {
-    const [isLoged, setIsLoged] = useState(false);
+    const { isLoged, setIsLoged } = useAuthStore();
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     const toggleDropdown = () => {

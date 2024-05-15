@@ -3,8 +3,10 @@ import { useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useAuthStore } from '../useAuthStore';
 
 const Login = () => {
+    const { setIsLoged } = useAuthStore();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -17,21 +19,24 @@ const Login = () => {
                 password,
             });
             // Handle successful login (e.g., store token, redirect)
-            alert({ 'Login successful:': response.status });
-        } catch (error) {
+            setIsLoged(true);
+            alert('Login successful');
+            // In your login component after successful login
+            localStorage.setItem('isLoggedIn', 'true');
+        } catch (err) {
             // Handle login error (e.g., display error message)
             setError('Invalid email or password');
         }
     };
 
     return (
-        <div className='flex h-screen '>
+        <div className='flex h-screen'>
             <div className='neumorphism m-auto w-full max-w-xs rounded bg-white p-5'>
                 <header>
                     <Image
                         className='mx-auto mb-5 w-20'
                         src='/static/images/logo.png'
-                        alt='d'
+                        alt='logo'
                         width={200}
                         height={200}
                     />
