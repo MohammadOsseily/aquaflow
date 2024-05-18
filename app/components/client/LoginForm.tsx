@@ -23,9 +23,9 @@ const Login = () => {
             // Handle successful login (e.g., store token, redirect)
             setIsLoged(true);
             alert('Login successful');
-            router.push('/about');
             // In your login component after successful login
             localStorage.setItem('isLoggedIn', 'true');
+            router.push('/vendors/vendor1');
         } catch (err) {
             // Handle login error (e.g., display error message)
             setError('Invalid email or password');
