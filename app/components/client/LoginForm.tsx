@@ -4,12 +4,14 @@ import axios from 'axios';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useAuthStore } from '../useAuthStore';
+import { useRouter } from 'next/navigation';
 
 const Login = () => {
     const { setIsLoged } = useAuthStore();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const router = useRouter();
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -21,6 +23,7 @@ const Login = () => {
             // Handle successful login (e.g., store token, redirect)
             setIsLoged(true);
             alert('Login successful');
+            router.push('/about');
             // In your login component after successful login
             localStorage.setItem('isLoggedIn', 'true');
         } catch (err) {
