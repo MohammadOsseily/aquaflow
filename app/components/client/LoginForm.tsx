@@ -22,7 +22,7 @@ const Login = () => {
             });
             // Handle successful login (e.g., store token, redirect)
             setIsLoged(true);
-            alert('Login successful');
+            alert('Login successful' + response.data.user);
             // In your login component after successful login
             localStorage.setItem('isLoggedIn', 'true');
             router.push('/vendors/vendor1');
