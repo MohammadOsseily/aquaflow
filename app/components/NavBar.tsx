@@ -102,7 +102,7 @@ function NavBar() {
                     <Link className='btn-ghost rounded-xl p-2 transition duration-300 ease-in-out' href={'/about'}>
                         About
                     </Link>
-                    <Link className='btn-ghost rounded-xl p-2 transition duration-300 ease-in-out' href={'/contactUs'}>
+                    <Link className='btn-ghost rounded-xl p-2 transition duration-300 ease-in-out' href={'/insert'}>
                         Contact Us
                     </Link>
                     <div className='dropdown dropdown-bottom btn-ghost rounded-xl p-2 transition duration-300 ease-in-out'>
