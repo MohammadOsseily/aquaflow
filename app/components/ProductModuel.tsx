@@ -16,13 +16,7 @@ function ProductModuel({ products, setSelectedProduct }: props) {
         <div className=' modal-box  flex   h-2/3 w-full max-w-5xl items-center bg-neutral md:w-1/2'>
             <div className='flex h-full w-full flex-col md:flex-row '>
                 <div className='flex w-full flex-row items-center justify-center md:w-1/2 md:flex-col'>
-                    <Image
-                        className=' h-3/4 w-3/4'
-                        src={products.gallery[1]}
-                        width={100}
-                        height={50}
-                        alt={products.label}
-                    />
+                    <Image className=' h-3/4 w-3/4' src={products.image} width={100} height={50} alt={products.label} />
                 </div>
 
                 <div className='flex h-full w-full flex-col  pt-4 md:w-1/2 '>

@@ -15,7 +15,7 @@ function ProductCard({ product, setSelectedProduct }: props) {
     return (
         <div className='flex flex-col items-center' onClick={() => setSelectedProduct(product)}>
             <figure className=' text-center' style={{ width: '70px', height: '70px' }}>
-                <Image className='' alt={product.label} width={50} height={50} src={product.gallery[1]} />
+                <Image className='' alt={product.label} width={50} height={50} src={product.image} />
             </figure>
             <div className='card-body flex justify-between'>
                 <h2 className='card-title flex justify-center'>{product.label}</h2>

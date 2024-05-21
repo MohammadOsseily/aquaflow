@@ -21,7 +21,7 @@ function ListOfProducts({ product, setSelectedProduct }: props) {
                             <div key={index} className='ml-7 h-full w-1/4 py-7 hover:brightness-[80%]'>
                                 <Image
                                     alt={product.label}
-                                    src={product.gallery[1]}
+                                    src={product.image}
                                     width={300}
                                     height={300}
                                     className='mx-auto w-8'

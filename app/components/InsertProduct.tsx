@@ -9,7 +9,7 @@ const InsertProduct = () => {
     const [price, setPrice] = useState('');
     const [stock, setStock] = useState('');
     const [sku, setSku] = useState('');
-    const [gallery, setGallery] = useState('');
+    const [image, setImage] = useState('');
     const router = useRouter();
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -21,7 +21,7 @@ const InsertProduct = () => {
                 price: parseFloat(price),
                 stock: parseInt(stock),
                 sku,
-                gallery: gallery.split(',').map((url) => url.trim()), // Assuming gallery is a comma-separated list of URLs
+                iamge: image,
             });
             if (response.status === 201) {
                 router.push('/products');
@@ -62,8 +62,8 @@ const InsertProduct = () => {
                     <input type='text' value={sku} onChange={(e) => setSku(e.target.value)} required />
                 </div>
                 <div>
-                    <label>Gallery (comma-separated URLs)</label>
-                    <input type='text' value={gallery} onChange={(e) => setGallery(e.target.value)} />
+                    <label>Image Link</label>
+                    <input type='text' value={image} onChange={(e) => setImage(e.target.value)} />
                 </div>
                 <button type='submit'>Insert Product</button>
             </form>
