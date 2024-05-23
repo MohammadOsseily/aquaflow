@@ -57,33 +57,49 @@ const ProductCreate: React.FC = () => {
 
     return (
         <div>
-            <h2>Create Product</h2>
+            <div className='pb-5 text-3xl'>Create Product</div>
             <form onSubmit={handleSubmit}>
-                <label>
+                <label className='input input-bordered flex items-center gap-2'>
                     Label:
-                    <input type='text' value={label} onChange={(e) => setLabel(e.target.value)} required />
+                    <input
+                        value={label}
+                        onChange={(e) => setLabel(e.target.value)}
+                        required
+                        type='text'
+                        className='grow'
+                    />
                 </label>
-                <label>
+                <label className='input input-bordered flex items-center gap-2'>
                     Description:
-                    <textarea value={description} onChange={(e) => setDescription(e.target.value)} />
+                    <input
+                        value={description}
+                        onChange={(e) => setDescription(e.target.value)}
+                        type='text'
+                        className='grow'
+                    />
                 </label>
-                <label>
+                <label className='input input-bordered flex items-center gap-2'>
                     Price:
-                    <input type='number' name='price' value={price} onChange={handleChange} required />
+                    <input type='number' name='price' value={price} onChange={handleChange} required className='grow' />
                 </label>
-                <label>
+                <label className='input input-bordered flex items-center gap-2'>
                     Stock:
-                    <input type='number' name='stock' value={stock} onChange={handleChange} required />
+                    <input type='number' name='stock' value={stock} onChange={handleChange} required className='grow' />
                 </label>
-                <label>
+                <label className='input input-bordered flex items-center gap-2'>
                     SKU:
-                    <input type='text' value={sku} onChange={(e) => setSku(e.target.value)} required />
+                    <input type='text' value={sku} onChange={(e) => setSku(e.target.value)} required className='grow' />
                 </label>
-                <label>
-                    Image Link
-                    <input type='text' value={image} onChange={(e) => setImage(e.target.value)} />
+                <label className='input input-bordered flex items-center gap-2'>
+                    Image URL:
+                    <input type='text' value={image} onChange={(e) => setImage(e.target.value)} className='grow' />
                 </label>
-                <button type='submit'>Create</button>
+
+                <button
+                    className=' flex w-20  justify-center rounded-full bg-secondary py-4 text-sm font-semibold uppercase text-white hover:bg-gray-500 '
+                    type='submit'>
+                    Create
+                </button>
             </form>
         </div>
     );

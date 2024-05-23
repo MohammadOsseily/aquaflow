@@ -3,10 +3,18 @@ import type { NextRequest } from 'next/server';
 
 // This function can be marked `async` if using `await` inside
 export function middleware(request: NextRequest) {
-    return NextResponse.redirect(new URL('/home', request.url));
+    return NextResponse.redirect(new URL('/', request.url));
+
+    if (request.nextUrl.pathname.startsWith('/about')) {
+        return NextResponse.rewrite(new URL('/about-2', request.url));
+    }
+
+    if (request.nextUrl.pathname.startsWith('/dashboard')) {
+        return NextResponse.rewrite(new URL('/dashboard/user', request.url));
+    }
 }
 
 // See "Matching Paths" below to learn more
 export const config = {
-    matcher: '/vendor/vendor1',
+    matcher: ['/vendor/1', '/vendor/2', '/vendor/3', '/vendor/4', '/account'],
 };

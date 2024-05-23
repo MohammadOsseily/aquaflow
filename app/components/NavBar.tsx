@@ -54,16 +54,16 @@ function NavBar() {
                                         tabIndex={0}
                                         className='menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow'>
                                         <li>
-                                            <Link href='/vendors/vendor1'>Vendor 1</Link>
+                                            <Link href='/vendor/1'>Vendor 1</Link>
                                         </li>
                                         <li>
-                                            <Link href='/vendors/vendor2'>Vendor 2</Link>
+                                            <Link href='/vendor/2'>Vendor 2</Link>
                                         </li>
                                         <li>
-                                            <Link href='/vendors/vendor3'>Vendor 3</Link>
+                                            <Link href='/vendor/3'>Vendor 3</Link>
                                         </li>
                                         <li>
-                                            <Link href='/vendors/vendor4'>Vendor 4</Link>
+                                            <Link href='/vendor/4'>Vendor 4</Link>
                                         </li>
                                     </ul>
                                 )}
@@ -113,16 +113,16 @@ function NavBar() {
                             tabIndex={0}
                             className='menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow'>
                             <li>
-                                <Link href='/vendors/vendor1'>Vendor 1</Link>
+                                <Link href='/vendor/1'>Vendor 1</Link>
                             </li>
                             <li>
-                                <Link href={'/vendors/vendor2'}>Vendor 2</Link>
+                                <Link href={'/vendor/2'}>Vendor 2</Link>
                             </li>
                             <li>
-                                <Link href={'/vendors/vendor3'}>Vendor 3</Link>
+                                <Link href={'/vendor/3'}>Vendor 3</Link>
                             </li>
                             <li>
-                                <Link href={'/vendors/vendor4'}>Vendor 4</Link>
+                                <Link href={'/vendor/4'}>Vendor 4</Link>
                             </li>
                         </ul>
                     </div>
@@ -184,11 +184,11 @@ function NavBar() {
                     </div>
                 </div>
                 {!isLoged && (
-                    <div className='w-35 flex h-16 flex-row items-center justify-around rounded-full bg-white pl-4 text-sm md:h-20 md:w-44 md:text-base'>
-                        <div className=''>
+                    <div className='w-26 flex h-16 flex-row items-center justify-around rounded-full bg-white text-sm  md:h-16 md:w-44 md:text-base'>
+                        <div className='pl-2 text-sm hover:text-gray-500'>
                             <Link href={'/auth/login'}>Login</Link>
                         </div>
-                        <div className=' ml-1 flex h-10 w-16 items-center justify-center rounded-full bg-secondary text-sm text-white md:ml-0 md:h-14 md:w-20  md:text-base'>
+                        <div className=' ml-1 flex h-10 w-16 items-center justify-center rounded-full bg-secondary text-sm text-white hover:brightness-90 md:ml-2 md:h-10 md:w-16   md:text-sm'>
                             <Link href={'/register'}>Sign Up</Link>
                         </div>
                     </div>

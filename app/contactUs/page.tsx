@@ -1,9 +1,6 @@
-import ProductCreate from '../components/ProductCreate';
-
 function ContactUs() {
     return (
         <div>
-            {/* <hr />
             <div className='pt-10 '>
                 <div className='pb-10 text-4xl '>Contact Us</div>
 
@@ -18,8 +15,7 @@ function ContactUs() {
                 <div className='pb-5 text-lg text-secondary'>Our Store Address:</div>
 
                 <div className='text-gray-500'>Beirut, Lebanon</div>
-            </div> */}
-            <ProductCreate />
+            </div>
         </div>
     );
 }
