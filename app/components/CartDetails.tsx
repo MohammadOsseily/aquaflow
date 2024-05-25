@@ -4,10 +4,10 @@ import { BiPlus } from 'react-icons/bi';
 import { PiTrashDuotone } from 'react-icons/pi';
 
 import 'react-icons';
-import { CartDetailesType } from '../../types/cartDetailes';
+import { CartItem } from '../../types/cart';
 
 type props = {
-    cartDetailes: CartDetailesType;
+    cartDetailes: CartItem;
 };
 
 function CartDetails({ cartDetailes }: props) {
@@ -19,13 +19,12 @@ function CartDetails({ cartDetailes }: props) {
                         width={200}
                         height={200}
                         className='h-24'
-                        src={'/static/images/' + cartDetailes.image}
-                        alt={cartDetailes.productName}
+                        src={cartDetailes.product.image}
+                        alt={cartDetailes.product.label}
                     />
                 </div>
                 <div className='ml-4 flex  flex-col justify-around'>
-                    <span className='text-sm font-bold'>{cartDetailes.productName}</span>
-                    <span className='text-xs text-red-500'>{cartDetailes.companyName}</span>
+                    <span className='text-sm font-bold'>{cartDetailes.product.label}</span>
                     <div className='text-xs font-semibold text-gray-500 '>
                         <PiTrashDuotone />
                     </div>
@@ -36,8 +35,8 @@ function CartDetails({ cartDetailes }: props) {
                 <input className='mx-2 w-4 border text-center md:w-8' type='text' value='1' />
                 <BiPlus />
             </div>
-            <div className='w-1/5 text-center text-sm font-semibold'>$ {cartDetailes.price}</div>
-            <div className='w-1/5 text-center text-sm font-semibold'>${cartDetailes.total}</div>
+            <div className='w-1/5 text-center text-sm font-semibold'>$ {cartDetailes.product.price}</div>
+            <div className='w-1/5 text-center text-sm font-semibold'>${cartDetailes.product.price}</div>
         </div>
     );
 }

@@ -6,9 +6,3 @@ export interface CartItem {
     quantity: number;
     product: ProductType;
 }
-
-export interface Cart {
-    id: number;
-    user_id: number;
-    items: CartItem[];
-}

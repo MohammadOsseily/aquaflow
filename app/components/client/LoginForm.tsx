@@ -7,14 +7,15 @@ import { useAuthStore } from '../useAuthStore';
 import { useRouter } from 'next/navigation';
 
 const Login = () => {
-    const { setIsLoged } = useAuthStore();
+    const router = useRouter();
+    const { setIsLoged, setUser } = useAuthStore();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const router = useRouter();
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
         try {
             const response = await axios.post('http://127.0.0.1:8000/api/login', {
                 email,
@@ -26,9 +27,18 @@ const Login = () => {
             // const password = response.data.user.password;
             // const role = response.data.user.role;
             // const vendor = response.data.user.vendor;
+            const { token, user } = response.data;
+
+            localStorage.setItem('authToken', token);
+            localStorage.setItem('user', JSON.stringify(user));
+
+            localStorage.setItem('email', user.email);
+            localStorage.setItem('password', password);
 
             // Handle successful login (e.g., store token, redirect)
+            setUser(user);
             setIsLoged(true);
+
             alert('Login successful ' + response.data.user.name);
             if (response.data.user.role == 2) {
                 router.push('/dashboard/admin');
