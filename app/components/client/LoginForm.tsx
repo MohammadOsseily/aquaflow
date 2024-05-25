@@ -20,13 +20,26 @@ const Login = () => {
                 email,
                 password,
             });
-            console.log(response.data);
+            // console.log(response.data.user.name);
+            // const name = response.data.user.name;
+            // const email = response.data.user.email;
+            // const password = response.data.user.password;
+            // const role = response.data.user.role;
+            // const vendor = response.data.user.vendor;
+
             // Handle successful login (e.g., store token, redirect)
             setIsLoged(true);
-            alert('Login successful' + response.data.user);
+            alert('Login successful ' + response.data.user.name);
+            if (response.data.user.role == 2) {
+                router.push('/dashboard/admin');
+            } else if (response.data.user.role == 1) {
+                router.push('/dashboard/vendor');
+            } else if (response.data.user.role == 0) {
+                router.push('/account');
+            }
             // In your login component after successful login
             localStorage.setItem('isLoggedIn', 'true');
-            router.push('/');
+            // router.push('/');
         } catch (err) {
             // Handle login error (e.g., display error message)
             setError('Invalid email or password');
