@@ -30,11 +30,11 @@ function ListPHandler() {
                     );
                 })}
 
-                {selectedProduct != undefined && (
+                {/* {selectedProduct != undefined && (
                     <div className='fixed inset-0 z-20 flex h-full w-full items-center justify-center   bg-black/50  backdrop-blur-sm'>
                         <ProductModuel products={selectedProduct} setSelectedProduct={setSelectedProduct} />
                     </div>
-                )}
+                )} */}
             </div>
         );
     }
