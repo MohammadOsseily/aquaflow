@@ -53,7 +53,6 @@ function ProductCard({ product, setSelectedProduct }: Props) {
                         href='#'
                         className='btn btn-primary bg-secondary hover:bg-secondary'>
                         <FiShoppingCart size={25} className='bg-secondary text-white' />
-                        add to cart
                     </Link>
                 </div>
             </div>

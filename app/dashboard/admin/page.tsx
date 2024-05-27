@@ -5,7 +5,7 @@ import GlobalTextField from '../../components/GlobalTextField';
 function Admin() {
     return (
         <div className=''>
-            <div className='mx-auto w-4/5 pb-7 pt-7 text-4xl '>Profile</div>
+            <div className='mx-auto w-4/5 pb-7 pt-7 text-4xl '>Admin Dashboard</div>
             {/* <AccountBar /> */}
             <div className='mx-auto w-4/5 pt-5'>
                 <div className=''>

@@ -165,15 +165,15 @@ function NavBar() {
                                     />
                                 </svg>
 
-                                <span className='badge indicator-item badge-sm'>8</span>
+                                {/* <span className='badge indicator-item badge-sm'>8</span> */}
                             </div>
                         </label>
                         <div
                             tabIndex={0}
                             className='card dropdown-content card-compact z-[1] mt-3 w-52 bg-base-100 shadow'>
                             <div className='card-body'>
-                                <span className='text-lg font-bold'>8 Items</span>
-                                <span className='text-info'>Subtotal: $999</span>
+                                {/* <span className='text-lg font-bold'>8 Items</span>
+                                <span className='text-info'>Subtotal: $999</span> */}
                                 <div className='card-actions'>
                                     <Link href={'/cart'}>
                                         <button className='btn btn-primary btn-block'>View cart</button>

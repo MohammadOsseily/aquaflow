@@ -1,5 +1,5 @@
 import GlobalTextField from '../components/GlobalTextField';
-import InternationalPhoneNumber from '../components/InternationalPhoneNumber';
+// import InternationalPhoneNumber from '../components/InternationalPhoneNumber';
 
 function Chechkout() {
     return (
@@ -17,7 +17,7 @@ function Chechkout() {
                                 inputType: 'email',
                             }}
                         />
-                        <InternationalPhoneNumber />
+                        {/* <InternationalPhoneNumber /> */}
 
                         <GlobalTextField
                             globalTextField={{

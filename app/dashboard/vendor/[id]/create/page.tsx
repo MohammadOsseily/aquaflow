@@ -9,7 +9,7 @@ interface Product {
     price: number;
     stock: number;
     sku: string;
-    image: string;
+    image?: string;
 }
 
 const ProductCreate: React.FC = () => {

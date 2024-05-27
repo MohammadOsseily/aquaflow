@@ -1,14 +1,15 @@
-import AccountBar from '../components/AccountBar';
+// import AccountBar from '../components/AccountBar';
 import GlobalTextField from '../components/GlobalTextField';
 
 function Account() {
     return (
         <div className=''>
-            <div className='mx-auto w-4/5 pb-7 pt-7 text-4xl '>Profile</div>
-            <AccountBar />
+            {/* <div className='mx-auto w-4/5 pb-7 pt-7 text-4xl '>Profile</div> */}
+            {/* <AccountBar /> */}
             <div className='mx-auto w-4/5 pt-5'>
+                <div className='pb-10 text-4xl '>User DashBoard</div>
                 <div className=''>
-                    <GlobalTextField
+                    {/* <GlobalTextField
                         globalTextField={{
                             inputAutoComplete: 'firstname',
                             inputName: 'fName',
@@ -31,16 +32,16 @@ function Account() {
                             inputPlaceholder: 'Display Name',
                             inputType: 'text',
                         }}
-                    />
-                    <GlobalTextField
+                    /> */}
+                    {/* <GlobalTextField
                         globalTextField={{
                             inputAutoComplete: 'email',
                             inputName: 'email',
                             inputPlaceholder: 'Email',
                             inputType: 'email',
                         }}
-                    />
-                    <div className='pb-4 text-2xl'>Password Change</div>
+                    /> */}
+                    <div className='pb-4 text-2xl'>Change Password</div>
                     <GlobalTextField
                         globalTextField={{
                             inputAutoComplete: 'currentPassword',

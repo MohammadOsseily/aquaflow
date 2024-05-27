@@ -5,6 +5,7 @@ module.exports = nextConfig;
 
 module.exports = {
     images: {
-        domains: ['m.media-amazon.com'],
+        domains: ['m.media-amazon.com' , "picsum.photos"],
+       
     },
 }
