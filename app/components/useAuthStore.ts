@@ -1,36 +1,33 @@
-import { create } from 'zustand';
+import create from 'zustand';
+import axios from 'axios';
 
-interface User {
+type UserType = {
     id: number;
     name: string;
     email: string;
     role: number;
-    vendor?: string;
-}
+    vendor: string | null;
+};
 
-interface AuthState {
+type AuthState = {
     isLoged: boolean;
-    user?: User;
+    user: UserType | null;
     setIsLoged: (isLoged: boolean) => void;
-    setUser: (user: User) => void;
-    loadUserFromStorage: () => void;
-}
+    setUser: (user: UserType) => void;
+    initializeAuth: () => void;
+};
 
 export const useAuthStore = create<AuthState>((set) => ({
     isLoged: false,
-    user: undefined,
+    user: null,
     setIsLoged: (isLoged) => set({ isLoged }),
     setUser: (user) => set({ user }),
-    loadUserFromStorage: () => {
+    initializeAuth: () => {
         const token = localStorage.getItem('authToken');
         const user = localStorage.getItem('user');
         if (token && user) {
             set({ isLoged: true, user: JSON.parse(user) });
+            axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
         }
     },
 }));
-
-// Load user info from localStorage when the app starts
-// useEffect(() => {
-//     useAuthStore.getState().loadUserFromStorage();
-// }, []);

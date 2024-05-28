@@ -5,13 +5,19 @@ import { useState } from 'react';
 import 'react-icons';
 import { CgProfile } from 'react-icons/cg';
 import { useAuthStore } from './useAuthStore';
+import { redirect, useRouter } from 'next/navigation';
 
 function NavBar() {
     const { isLoged, setIsLoged } = useAuthStore();
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
+    const [search, setSearch] = useState('');
+    const router = useRouter();
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
+    };
+    const handelSubmit = () => {
+        // router.push('/search/' + search);
+        redirect('/search/' + search);
     };
     return (
         <div className='bg-red navbar'>
@@ -130,27 +136,35 @@ function NavBar() {
             </div>
 
             <div className='navbar-end md:w-2/5'>
-                <input type='text' placeholder='Type here' className='input hidden w-full max-w-xs md:flex' />
-                <button className='btn btn-circle btn-ghost ml-1 hidden md:flex'>
-                    <svg
-                        xmlns='http://www.w3.org/2000/svg'
-                        className='h-5 w-5'
-                        fill='none'
-                        viewBox='0 0 24 24'
-                        stroke='currentColor'>
-                        <path
-                            strokeLinecap='round'
-                            strokeLinejoin='round'
-                            strokeWidth='2'
-                            d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
-                        />
-                    </svg>
-                </button>
+                <form method='GET' className='flex' onSubmit={handelSubmit}>
+                    <input
+                        value={search}
+                        type='text'
+                        onChange={(e) => setSearch(e.target.value)}
+                        placeholder='Type here'
+                        className='input hidden w-full max-w-xs md:flex'
+                    />
+                    <button type='submit' className='btn btn-circle btn-ghost ml-1 hidden md:flex'>
+                        <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            className='h-5 w-5'
+                            fill='none'
+                            viewBox='0 0 24 24'
+                            stroke='currentColor'>
+                            <path
+                                strokeLinecap='round'
+                                strokeLinejoin='round'
+                                strokeWidth='2'
+                                d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
+                            />
+                        </svg>
+                    </button>
+                </form>
 
                 <div className='flex-none'>
                     <div className='dropdown dropdown-end'>
                         <label tabIndex={0} className='btn btn-circle btn-ghost'>
-                            <div className='indicator'>
+                            <Link href={'/cart'} className='indicator'>
                                 <svg
                                     xmlns='http://www.w3.org/2000/svg'
                                     className='h-5 w-5'
@@ -166,21 +180,8 @@ function NavBar() {
                                 </svg>
 
                                 {/* <span className='badge indicator-item badge-sm'>8</span> */}
-                            </div>
+                            </Link>
                         </label>
-                        <div
-                            tabIndex={0}
-                            className='card dropdown-content card-compact z-[1] mt-3 w-52 bg-base-100 shadow'>
-                            <div className='card-body'>
-                                {/* <span className='text-lg font-bold'>8 Items</span>
-                                <span className='text-info'>Subtotal: $999</span> */}
-                                <div className='card-actions'>
-                                    <Link href={'/cart'}>
-                                        <button className='btn btn-primary btn-block'>View cart</button>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 {!isLoged && (

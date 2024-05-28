@@ -1,4 +1,5 @@
 'use client';
+
 import { useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
@@ -21,21 +22,14 @@ const Login = () => {
                 email,
                 password,
             });
-            // console.log(response.data.user.name);
-            // const name = response.data.user.name;
-            // const email = response.data.user.email;
-            // const password = response.data.user.password;
-            // const role = response.data.user.role;
-            // const vendor = response.data.user.vendor;
             const { token, user } = response.data;
 
             localStorage.setItem('authToken', token);
             localStorage.setItem('user', JSON.stringify(user));
-
-            localStorage.setItem('email', user.email);
+            localStorage.setItem('email', email);
             localStorage.setItem('password', password);
+            axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
-            // Handle successful login (e.g., store token, redirect)
             setUser(user);
             setIsLoged(true);
 
@@ -47,11 +41,7 @@ const Login = () => {
             } else if (response.data.user.role == 0) {
                 router.push('/account');
             }
-            // In your login component after successful login
-            localStorage.setItem('isLoggedIn', 'true');
-            // router.push('/');
         } catch (err) {
-            // Handle login error (e.g., display error message)
             setError('Invalid email or password');
         }
     };
