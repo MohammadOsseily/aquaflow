@@ -5,7 +5,7 @@ import { useState } from 'react';
 import 'react-icons';
 import { CgProfile } from 'react-icons/cg';
 import { useAuthStore } from './useAuthStore';
-import { redirect, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 function NavBar() {
     const { isLoged, setIsLoged } = useAuthStore();
@@ -15,9 +15,12 @@ function NavBar() {
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
     };
-    const handelSubmit = () => {
-        // router.push('/search/' + search);
-        redirect('/search/' + search);
+    console.log(search);
+    const handelSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        const encodedQuery = encodeURIComponent(search);
+        router.push(`/search/${encodedQuery}`);
+        // redirect('http://localhost:3000/search/' + search);
     };
     return (
         <div className='bg-red navbar'>
@@ -136,7 +139,7 @@ function NavBar() {
             </div>
 
             <div className='navbar-end md:w-2/5'>
-                <form method='GET' className='flex' onSubmit={handelSubmit}>
+                <form className='flex' onSubmit={handelSubmit}>
                     <input
                         value={search}
                         type='text'

@@ -1,49 +1,34 @@
 'use client';
-// import AccountBar from '../../components/AccountBar';
-import GlobalTextField from '../../components/GlobalTextField';
 
-function Admin() {
+import { useEffect, useState } from 'react';
+
+import UserList from '../../components/UserList';
+import { PaginationType } from '../../../types/pagination';
+// sdfsd
+function ProductCardHandler() {
+    const [users, setProducts] = useState<PaginationType | null>(null);
+
+    useEffect(() => {
+        fetch('http://127.0.0.1:8000/api/user/list', { method: 'post' })
+            .then((res) => res.json())
+            .then((data) => {
+                setProducts(data);
+            });
+    }, []);
+
     return (
-        <div className=''>
-            <div className='mx-auto w-4/5 pb-7 pt-7 text-4xl '>Admin Dashboard</div>
-            {/* <AccountBar /> */}
-            <div className='mx-auto w-4/5 pt-5'>
-                <div className=''>
-                    <div className='pb-4 text-2xl'>Password Change</div>
-                    <GlobalTextField
-                        globalTextField={{
-                            inputAutoComplete: 'currentPassword',
-                            inputName: 'currentPassword',
-                            inputPlaceholder: 'Current password',
-                            inputType: 'password',
-                        }}
-                    />
-                    <GlobalTextField
-                        globalTextField={{
-                            inputAutoComplete: 'newPassword',
-                            inputName: 'newPassword',
-                            inputPlaceholder: 'New password',
-                            inputType: 'password',
-                        }}
-                    />
-                    <GlobalTextField
-                        globalTextField={{
-                            inputAutoComplete: 'confirmPassword',
-                            inputName: 'confirmPassword',
-                            inputPlaceholder: 'Confirm new password',
-                            inputType: 'password',
-                        }}
-                    />
-                    <div className='flex justify-center'>
-                        <button
-                            onClick={() => alert('password have been changed')}
-                            className=' w-1/2  rounded-full bg-secondary py-3 text-sm font-semibold uppercase text-white hover:bg-gray-600 '>
-                            Submit
-                        </button>
-                    </div>
-                </div>
+        <>
+            <div className='grid grid-cols-2 gap-4 py-5  md:mx-auto  md:grid-cols-4 '>
+                {users?.data?.map((user, index) => {
+                    return (
+                        <div className='neumorphism card glass  flex  items-center bg-primary pt-4 ' key={index}>
+                            <UserList user={user} key={index} />
+                        </div>
+                    );
+                })}
             </div>
-        </div>
+        </>
     );
 }
-export default Admin;
+
+export default ProductCardHandler;
